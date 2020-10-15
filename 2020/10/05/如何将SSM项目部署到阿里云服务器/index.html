@@ -6,17 +6,52 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020/9 | Btao的博客</title>
+  <title>如何将SSM项目部署到阿里云服务器 | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Btao的博客">
-<meta property="og:url" content="http://example.com/archives/2020/09/index.html">
+  <meta name="description" content="如何将SSM项目部署到阿里云服务器主要分为五个步骤：1.购买服务器2下载xshell和Xftp 63.在服务器上安装 jdk，mysql，tomcat。4.数据库准备数据5.maven项目生成war文件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何将SSM项目部署到阿里云服务器">
+<meta property="og:url" content="http://example.com/2020/10/05/%E5%A6%82%E4%BD%95%E5%B0%86SSM%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="我的个人博客">
+<meta property="og:description" content="如何将SSM项目部署到阿里云服务器主要分为五个步骤：1.购买服务器2下载xshell和Xftp 63.在服务器上安装 jdk，mysql，tomcat。4.数据库准备数据5.maven项目生成war文件。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328133913874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019032813485861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328134950993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328135022210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328135104130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328135509930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328135624325.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328140129217.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328140445544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/201903281406380.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328140902159.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328140925890.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328141018233.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328141040570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328141317248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328141436592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142018913.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142128653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/201903281426088.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142648756.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142727337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142812239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328142452832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328143419120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328143616316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328144027233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328144336424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328144650647.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328144610459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190328151747614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-10-05T06:14:33.000Z">
+<meta property="article:modified_time" content="2020-10-15T02:44:35.849Z">
 <meta property="article:author" content="B_tao">
+<meta property="article:tag" content="ssm">
+<meta property="article:tag" content="服务器">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190328133913874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Btao的博客" type="application/atom+xml">
   
@@ -162,98 +197,244 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-如何将SSM项目部署到阿里云服务器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/MySQL%E5%8D%B8%E8%BD%BD%E4%B8%8E%E6%9B%B4%E6%96%B0/" class="archive-article-date">
-  	<time datetime="2020-09-28T12:22:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/MySQL%E5%8D%B8%E8%BD%BD%E4%B8%8E%E6%9B%B4%E6%96%B0/">MySQL卸载与更新</a>
+    <h1 class="article-title" itemprop="name">
+      如何将SSM项目部署到阿里云服务器
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/10/05/%E5%A6%82%E4%BD%95%E5%B0%86SSM%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-10-05T06:14:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何将SSM项目部署到阿里云服务器"><a href="#如何将SSM项目部署到阿里云服务器" class="headerlink" title="如何将SSM项目部署到阿里云服务器"></a>如何将SSM项目部署到阿里云服务器</h1><p>主要分为五个步骤：<br><strong>1.购买服务器</strong><br><strong>2下载xshell和Xftp 6</strong><br><strong>3.在服务器上安装 jdk，mysql，tomcat。</strong><br><strong>4.数据库准备数据</strong><br><strong>5.maven项目生成war文件。</strong></p>
+<a id="more"></a>
+
+<p><strong>1.购买服务器</strong><br>在阿里云购买一个 ESC服务器网址是：<a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com</a><br>这方面购买还是教程很多的 ，这里不详细多bb，另外学生价格还是很便宜的，一个服务器加上一个实例基本30元不到。下面是购买后的截图，红色遮盖部分是Ip地址。<br><img src="https://img-blog.csdnimg.cn/20190328133913874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2下载xshell和Xftp 6</strong><br>这两个软件，xshell是连接服务器的，我们购买的服务器，在我们电脑操作必须通过xshell来控制服务器，xshell下载地址，Xftp6是将我们电脑的数据传送到我们的服务器，<a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/all-downloads/?code=623">https://www.netsarang.com/zh/all-downloads/?code=623</a><br>打开xshell新建连接，连接我们在阿里云买的服务器<img src="https://img-blog.csdnimg.cn/2019032813485861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190328134950993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="用户名一般为 root"><img src="https://img-blog.csdnimg.cn/20190328135022210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="密码是你在购买阿里云服务器时候的密码"><br><img src="https://img-blog.csdnimg.cn/20190328135104130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="表示已经连接到我们的阿里云服务器">表示已经连接到我们购买的阿里云<br><strong>3.在服务器上安装 jdk，mysql，tomcat。</strong><br>（1）安装jdk<br>在xshell里面 输入（只能右键粘贴，不能ctrl+c）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install java-1.8.0-openjdk.x86_64</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328135509930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="表示安装完成"><br>表示安装完成。<br>输入查看jdk版本：<code>java -version</code><br><img src="https://img-blog.csdnimg.cn/20190328135624325.png" alt="安装成功！"><br>安装成功。<br>(2)安装mysql。<br>输入(表示进入tmp中的文件夹）下面三行代码分三步执行。：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;tmp</span><br><span class="line">wget http:&#x2F;&#x2F;repo.mysql.com&#x2F;mysql-community-release-el7-5.noarch.rpm  </span><br><span class="line">rpm -ivh mysql-community-release-el7-5.noarch.rpm  </span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+
+<p>然后执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql mysql-server mysql-devel -y</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328140129217.png" alt="在这里插入图片描述"><br>安装成功。<br>启动mysql:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysql.service</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>刚安装的mysql在服务器中是没有密码的，所以设置密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root password ****（你想设置的密码）</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>登录验证mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p****(你设置的密码）</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328140445544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">已经进入数据库中，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/201903281406380.png" alt="在这里插入图片描述"><br>在服务中的mysql中的数据库显示。<br>（3）安装tomcat；<br>这里安装和前两个jdk和mysql有所不一样。下面是tomcat下载的地址，下载到本地，<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/">https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/</a><br><img src="https://img-blog.csdnimg.cn/20190328140902159.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">选择tomcat9.<br>点击：<br><img src="https://img-blog.csdnimg.cn/20190328140925890.png" alt="在这里插入图片描述"><br>点击 bin<br><img src="https://img-blog.csdnimg.cn/20190328141018233.png" alt="在这里插入图片描述"><br>选择后缀为tar.gz的版本 这里你也可以选择tomcat7/8.无所谓<br>但是后缀一定是 tar.gz版本。<br>下载到本地，<br><img src="https://img-blog.csdnimg.cn/20190328141040570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">打开在步骤1下载的Xftp6.建立连接，和xshell6建立连接相似。<br><img src="https://img-blog.csdnimg.cn/20190328141317248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190328141436592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">上述是把本地下载的apache-tomcat-9.0.17.tar传输到服务器的/usr/local目录下，<br>在xshell中解压apache-tomcat-9.0.17.tar</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>解压apache-tomcat-9.0.17.tar</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xzf apache-tomcat-9.0.17.tar.gz</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>这目录中将<code>apache-tomcat-9.0.17.tar</code>文件夹修改为<code>tomcat9</code><br><img src="https://img-blog.csdnimg.cn/20190328142018913.png" alt="在这里插入图片描述"><br>启动tomcat：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> cd &#x2F;usr&#x2F;local&#x2F;tomcat9&#x2F;bin</span><br><span class="line">.&#x2F;startup.sh</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328142128653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">启动成功，<br>此外打开阿里云管理控制台，设置安全组。</p>
+<p><img src="https://img-blog.csdnimg.cn/201903281426088.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190328142648756.png" alt="在这里插入图片描述">添加安全组规则<br><img src="https://img-blog.csdnimg.cn/20190328142727337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190328142812239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>确定！<br>在浏览器输入 <code>ip:8080</code><br><img src="https://img-blog.csdnimg.cn/20190328142452832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">表示tomcat安装成功。</p>
+<p><strong>4.数据库准备数据</strong>。<br>将mysql中数据 导出sql文件。有Xftp6传入。<br>将sql文件传入到服务器的usr/local路径下<br><img src="https://img-blog.csdnimg.cn/20190328143419120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>启动mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p*****(你的密码)</span><br><span class="line">CREATE DATABASE cashbook DEFAULT CHARACTER SET utf8;</span><br><span class="line">show databases;</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328143616316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">退出mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br><span class="line">mysql -u root -p****（你的密码） --default-character-set&#x3D;utf8 cashbook &lt; &#x2F;usr&#x2F;local&#x2F;cashbook.sql</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+
+<p>验证是否数据进入服务器mysql：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p密码</span><br><span class="line">use cashbook;</span><br><span class="line">select * from category</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190328144027233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">SUCCESS!!<br><strong>5.maven项目生成war文件。</strong><br>将war传入服务器tomcat9下面的wabapps目录中。还是使用Xftp6<br><img src="https://img-blog.csdnimg.cn/20190328144336424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">重新启动tomcat。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;local&#x2F;tomcat9&#x2F;bin</span><br><span class="line">.&#x2F;startup.sh</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+
+<p>查看tomcat日志可以看tomcat的状态：<br><img src="https://img-blog.csdnimg.cn/20190328144650647.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后在浏览器输入<br>cashbook_ssm是我的项目名称，login是登录：</p>
+<p><a target="_blank" rel="noopener" href="http://101.132.115.211:8080/cashbook_ssm/login">http://101.132.115.211:8080/cashbook_ssm/login</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20190328144610459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190328151747614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDg0NjUx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>外界网络就可以访问啦。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏噢老板ovo<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/epay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssm</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/22/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-09-22T15:12:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/22/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">如何用hexo搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/10/05/%E5%A6%82%E4%BD%95%E5%B0%86SSM%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/10/03/CSS%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS问题合集</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86SSM%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">如何将SSM项目部署到阿里云服务器</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -276,8 +457,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
