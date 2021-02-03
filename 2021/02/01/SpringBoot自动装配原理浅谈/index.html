@@ -8,19 +8,20 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>SpringBoot自动装配原理浅谈 | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SpringBoot自动装配原理浅谈pom.xml  spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件… 我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库">
+  <meta name="description" content="pom.xml  spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件… 我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot自动装配原理浅谈">
 <meta property="og:url" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="SpringBoot自动装配原理浅谈pom.xml  spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件… 我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库">
+<meta property="og:description" content="pom.xml  spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件… 我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/image/image-20210201093756756.png">
 <meta property="og:image" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/image/image-20210201093732593.png">
 <meta property="og:image" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/image/image-20210201095046864.png">
 <meta property="og:image" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/image/%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90.jpg">
+<meta property="og:image" content="http://example.com/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/_drafts/SpringBoot%E7%AC%94%E8%AE%B0/image/1.png">
 <meta property="article:published_time" content="2021-02-01T04:29:01.000Z">
-<meta property="article:modified_time" content="2021-02-01T04:57:22.550Z">
+<meta property="article:modified_time" content="2021-02-03T07:29:02.010Z">
 <meta property="article:author" content="B_tao">
 <meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
@@ -72,7 +73,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 12
+			总文章数 18
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -199,7 +200,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SpringBoot自动装配原理浅谈"><a href="#SpringBoot自动装配原理浅谈" class="headerlink" title="SpringBoot自动装配原理浅谈"></a>SpringBoot自动装配原理浅谈</h2><p><strong>pom.xml</strong></p>
+        <p><strong>pom.xml</strong></p>
 <ul>
 <li>spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件…</li>
 <li>我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库</li>
@@ -255,11 +256,20 @@
 <p>  <img src="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/image/%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90.jpg" alt="自动配置原理分析"></p>
 <ul>
 <li><p><strong>SpringApplication.run(DemoApplication.class, args);启动</strong></p>
-<ul>
-<li></li>
-</ul>
+<p>SpringApplication类，run方法</p>
+<p><img src="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/_drafts/SpringBoot%E7%AC%94%E8%AE%B0/image/1.png" alt="1"></p>
+<p>​    核心是JavaConfig @Configuration @Bean</p>
 </li>
 </ul>
+<ul>
+<li><strong>关于SpringBoot，我的理解：</strong></li>
+</ul>
+<ol>
+<li>自动装配。</li>
+<li>SpringApplication类判断应用的类型是普通的项目还是web项目，推断并设置main方法的定义类，找到运行的主类。</li>
+<li>run方法监听器获取上下文处理Bean。</li>
+</ol>
+<p><strong>学到SpringCloud可以全面接管SpringMVC的配置。例如SpringMVC已经自动装配的不够用。</strong></p>
 
       
 
@@ -374,6 +384,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot配置
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/02/01/%E5%85%B3%E4%BA%8E@ResponseBody%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">关于@ResponseBody详解</div>
@@ -403,7 +422,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88"><span class="toc-number">1.</span> <span class="toc-text">SpringBoot自动装配原理浅谈</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -554,7 +573,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -562,7 +581,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
