@@ -16,7 +16,7 @@
 <meta property="og:description" content="@Autowired注解作用：这个注解就是spring可以自动帮你把bean里面引用的对象的setter&#x2F;getter方法省略，它会自动帮你set&#x2F;get。初始化类的对象。 123456&lt;bean id&#x3D;&quot;userDao&quot; class&#x3D;&quot;...&quot;&#x2F;&gt;	&lt;bean id&#x3D;&quot;userService&quot; class&#x3D;&quot;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-03T07:01:42.000Z">
-<meta property="article:modified_time" content="2021-02-03T07:29:53.008Z">
+<meta property="article:modified_time" content="2021-02-03T08:35:39.176Z">
 <meta property="article:author" content="B_tao">
 <meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
@@ -203,7 +203,7 @@
 
 <h3 id="Autowired-默认是按照byType进行注入的，但是当byType方式找到了多个符合的bean，又是怎么处理的？"><a href="#Autowired-默认是按照byType进行注入的，但是当byType方式找到了多个符合的bean，又是怎么处理的？" class="headerlink" title="@Autowired 默认是按照byType进行注入的，但是当byType方式找到了多个符合的bean，又是怎么处理的？"></a><strong>@Autowired 默认是按照byType进行注入的，但是当byType方式找到了多个符合的bean，又是怎么处理的？</strong></h3><ul>
 <li>@Autowired默认是按照byType进行注入的，但是当byType方式找到多个符合，则又按照byName方式比对，如果还有多个，则报出异常。</li>
-<li><strong>涉及到Spring注入中byname和bytype的区别：</strong><a href>超链接8</a></li>
+<li><strong>涉及到Spring注入中byname和bytype的区别：</strong><a target="_blank" rel="noopener" href="https://btaoo.gitee.io/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/">Spring中byname和bytype总结</a></li>
 </ul>
 <p>例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> ExamUserMapper examUserMapper; - ExamUserMapper是一个接口</span><br></pre></td></tr></table></figure>
