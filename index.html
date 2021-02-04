@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 24
+			总文章数 25
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -246,6 +246,88 @@
 
 
   
+    <article id="post-转-Spring中Bean的自动装配实现及注解实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/04/%E8%BD%AC-Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">转--Spring中Bean的自动装配实现及注解实现</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/04/%E8%BD%AC-Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2021-02-04T09:08:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本节我们来介绍Bean的自动装配，自动装配指的是使用spring满足bean依赖的一种方法 ，spring会在应用上下文中为某个bean寻找其依赖的bean。</p>
+<p>在对Bean的自动装配介绍之前，我们先搭建要测试的环境，如下：</p>
+        
+          <a class="article-more-a" href="/2021/02/04/%E8%BD%AC-Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/04/%E8%BD%AC-Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Spring注解的默认的bean的id" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -294,6 +376,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
         		</li>
       		
 		</ul>
@@ -380,6 +466,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -460,6 +550,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
         		</li>
       		
 		</ul>
@@ -662,88 +756,6 @@
 
 
   
-    <article id="post-Git如何查看远程仓库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">Git如何查看远程仓库</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-02-03T08:02:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="切换远程仓库地址："><a href="#切换远程仓库地址：" class="headerlink" title="切换远程仓库地址："></a>切换远程仓库地址：</h2><ul>
-<li><p><strong>方式一：修改远程仓库地址</strong></p>
-<p>【git remote set-url origin URL】 更换远程仓库地址，URL为新地址。</p>
-</li>
-<li><p><strong>方式二：先删除远程仓库地址，然后再添加</strong></p>
-<p>【git remote rm origin】 删除现有远程仓库<br>【git remote add origin url】添加新远程仓库</p>
-</li>
-</ul>
-<h2 id="【git-remote-v-】查看远程仓库的地址"><a href="#【git-remote-v-】查看远程仓库的地址" class="headerlink" title="【git remote -v 】查看远程仓库的地址"></a>【git remote -v 】查看远程仓库的地址</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
@@ -909,6 +921,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">IOC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bean</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpEl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yaml</a>
               </li>
             
             <div class="clearfix"></div>
