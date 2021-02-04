@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: Oracle | Btao的博客</title>
+  <title>什么是Spring Bean？ | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Btao的博客">
-<meta property="og:url" content="http://example.com/tags/Oracle/index.html">
+  <meta name="description" content="Bean是Spring框架中最核心的两个概念之一（另一个是面向切面编程AOP）。 是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。 遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。 那么，Spring bean 到底是什么？ 接下来我们用图文方式来解析这一个概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是Spring Bean？">
+<meta property="og:url" content="http://example.com/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="我的个人博客">
+<meta property="og:description" content="Bean是Spring框架中最核心的两个概念之一（另一个是面向切面编程AOP）。 是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。 遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。 那么，Spring bean 到底是什么？ 接下来我们用图文方式来解析这一个概念。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/I66avzqyl17XcSBHDjRQmriaNbqJtGcsM67DX5MM7VwmVDApfjUKzkKrynjwZKQSba66hxhEtdJc1lBuDyKnrvw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2021-02-04T07:56:06.000Z">
+<meta property="article:modified_time" content="2021-02-04T07:58:00.886Z">
 <meta property="article:author" content="B_tao">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/I66avzqyl17XcSBHDjRQmriaNbqJtGcsM67DX5MM7VwmVDApfjUKzkKrynjwZKQSba66hxhEtdJc1lBuDyKnrvw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
   
     <link rel="alternative" href="/atom.xml" title="Btao的博客" type="application/atom+xml">
   
@@ -165,69 +170,265 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-什么是Spring-Bean？" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/29/Mysql%E4%B8%8EOracle%E7%9A%84JDBC%E4%BF%A1%E6%81%AF/" class="archive-article-date">
-  	<time datetime="2020-11-29T09:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-29</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/29/Mysql%E4%B8%8EOracle%E7%9A%84JDBC%E4%BF%A1%E6%81%AF/">Mysql与Oracle的JDBC信息</a>
+    <h1 class="article-title" itemprop="name">
+      什么是Spring Bean？
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" class="archive-article-date">
+  	<time datetime="2021-02-04T07:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+</a>
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Bean是Spring框架中<strong>最核心</strong>的两个概念之一（另一个是<strong>面向切面编程AOP</strong>）。</p>
+<p>是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。</p>
+<p>遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。</p>
+<p>那么，Spring bean 到底是什么？</p>
+<p>接下来我们用图文方式来解析这一个概念。</p>
+<a id="more"></a>
+
+<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h2><p>Spring 官方文档对 bean 的解释是：</p>
+<blockquote>
+<p>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</p>
+</blockquote>
+<p>翻译过来就是：</p>
+<blockquote>
+<p>在 Spring 中，构成应用程序<strong>主干</strong>并由<strong>Spring IoC容器</strong>管理的<strong>对象</strong>称为<strong>bean</strong>。bean是一个由Spring IoC容器实例化、组装和管理的对象。</p>
+</blockquote>
+<p>概念简单明了，我们提取处关键的信息：</p>
+<ol>
+<li>bean是对象，一个或者多个不限定</li>
+<li>bean由Spring中一个叫IoC的东西管理</li>
+<li>我们的应用程序由一个个bean构成</li>
+</ol>
+<p>第1和3好理解，那么IoC又是什么东西？</p>
+<h2 id="2-控制反转（IoC）"><a href="#2-控制反转（IoC）" class="headerlink" title="2 控制反转（IoC）"></a>2 控制反转（IoC）</h2><p><strong>控制反转</strong>英文全称：<strong>Inversion of Control</strong>，简称就是<code>IoC</code>。</p>
+<p>控制反转通过依赖注入（DI）方式<strong>实现对象之间的松耦合关系</strong>。</p>
+<p>程序运行时，依赖对象由【辅助程序】动态生成并注入到被依赖对象中，动态绑定两者的使用关系。</p>
+<p>Spring IoC容器就是这样的辅助程序，它负责对象的生成和依赖的注入，让后在交由我们使用。</p>
+<p>简而言之，就是：IoC就是<strong>一个对象定义其依赖关系而不创建它们的过程</strong>。</p>
+<p>这里我们可以细分为两个点。</p>
+<h3 id="2-1-私有属性保存依赖"><a href="#2-1-私有属性保存依赖" class="headerlink" title="2.1 私有属性保存依赖"></a>2.1 私有属性保存依赖</h3><p><strong>第1点：使用私有属性保存依赖对象，并且只能通过构造函数参数传入，</strong></p>
+<p>构造函数的参数可以是<strong>工厂方法</strong>、<strong>保存类对象的属性</strong>、或者是<strong>工厂方法返回值</strong>。</p>
+<p>假设我们有一个<code>Computer</code>类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Computer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String cpu;     <span class="comment">// CPU型号</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> ram;        <span class="comment">// RAM大小，单位GB</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Computer</span><span class="params">(String cpu, <span class="keyword">int</span> ram)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cpu = cpu;</span><br><span class="line">        <span class="keyword">this</span>.ram = ram;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们有另一个<code>Person</code>类依赖于<code>Computer</code>类，符合IoC的做法是这样：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Computer computer;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(Computer computer)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.computer = computer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不符合IoC的做法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 直接在Person里实例化Computer类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Computer computer = <span class="keyword">new</span> Computer(<span class="string">&quot;AMD&quot;</span>, <span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过【非构造函数】传入依赖</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Computer computer;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(Computer computer)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.computer = computer;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-让Spring控制类构建过程"><a href="#2-2-让Spring控制类构建过程" class="headerlink" title="2.2 让Spring控制类构建过程"></a>2.2 让Spring控制类构建过程</h3><p><strong>第2点：不用</strong><code>new</code><strong>，让Spring控制</strong><code>new</code><strong>过程。</strong></p>
+<p>在Spring中，我们基本不需要 <code>new</code> 一个类，这些都是让 Spring 去做的。</p>
+<p>Spring 启动时会把所需的类实例化成对象，如果需要依赖，则先实例化依赖，然后实例化当前类。</p>
+<p>因为依赖必须通过构建函数传入，所以实例化时，当前类就会接收并保存所有依赖的对象。</p>
+<p>这一步也就是所谓的<strong>依赖注入</strong>。</p>
+<h3 id="2-3-这就是IoC"><a href="#2-3-这就是IoC" class="headerlink" title="2.3 这就是IoC"></a>2.3 这就是IoC</h3><p>在 Spring 中，<strong>类的实例化、依赖的实例化、依赖的传入</strong>都交由 Spring Bean 容器控制，</p>
+<p>而不是用<code>new</code>方式实例化对象、通过非构造函数方法传入依赖等常规方式。</p>
+<p>实质的控制权已经交由程序管理，而不是程序员管理，所以叫做控制反转。</p>
+<h2 id="3-Bean？"><a href="#3-Bean？" class="headerlink" title="3 Bean？"></a>3 Bean？</h2><p>至于bean，则是几个概念。</p>
+<ul>
+<li>概念1：<strong>Bean容器</strong>，或称spring ioc容器，主要用来管理对象和依赖，以及依赖的注入。</li>
+<li>概念2：bean是一个<strong>Java对象</strong>，根据bean规范编写出来的类，并由bean容器生成的对象就是一个bean。</li>
+<li>概念3：bean规范。</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/I66avzqyl17XcSBHDjRQmriaNbqJtGcsM67DX5MM7VwmVDApfjUKzkKrynjwZKQSba66hxhEtdJc1lBuDyKnrvw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>bean规范如下：</p>
+<ol>
+<li>所有属性为private</li>
+<li>提供默认构造方法</li>
+<li>提供getter和setter</li>
+<li>实现serializable接口</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏噢老板ovo<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/epay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JDBC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
 	</div>
+	  
+      
 
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring中Bean自动装配的几种方式
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">@Component,@Controller,@Service,@Repository详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">1 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%EF%BC%88IoC%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">2 控制反转（IoC）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E4%BF%9D%E5%AD%98%E4%BE%9D%E8%B5%96"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 私有属性保存依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%AE%A9Spring%E6%8E%A7%E5%88%B6%E7%B1%BB%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 让Spring控制类构建过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E8%BF%99%E5%B0%B1%E6%98%AFIoC"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 这就是IoC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Bean%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3 Bean？</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -257,9 +458,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

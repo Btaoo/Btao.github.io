@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: Oracle | Btao的博客</title>
+  <title>@Component,@Controller,@Service,@Repository详解 | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Btao的博客">
-<meta property="og:url" content="http://example.com/tags/Oracle/index.html">
+  <meta name="description" content="@Component 用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。 @Controller 用来表示一个web控制层bean，如SpringMvc中的控制器。 @Service 用来表示一个业务层bean。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="@Component,@Controller,@Service,@Repository详解">
+<meta property="og:url" content="http://example.com/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="我的个人博客">
+<meta property="og:description" content="@Component 用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。 @Controller 用来表示一个web控制层bean，如SpringMvc中的控制器。 @Service 用来表示一个业务层bean。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/TNUwKhV0JpSlyNROtQqDiaF87MZXejHhhp99TxxicS5Wn3Uj7uC6dy6gKeOiaNg16qsqngauXGdib7B0e7icDhfz51w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/TNUwKhV0JpSlyNROtQqDiaF87MZXejHhhicgRfjNVkuVqufPnEdWA8XcMZUEECoegvGSUJwFzZ9gfrX7jiarWtMJg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2021-02-04T07:48:57.000Z">
+<meta property="article:modified_time" content="2021-02-04T08:20:24.022Z">
 <meta property="article:author" content="B_tao">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/TNUwKhV0JpSlyNROtQqDiaF87MZXejHhhp99TxxicS5Wn3Uj7uC6dy6gKeOiaNg16qsqngauXGdib7B0e7icDhfz51w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
   
     <link rel="alternative" href="/atom.xml" title="Btao的博客" type="application/atom+xml">
   
@@ -165,69 +171,267 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-@Component,@Controller,@Service,@Repository详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/29/Mysql%E4%B8%8EOracle%E7%9A%84JDBC%E4%BF%A1%E6%81%AF/" class="archive-article-date">
-  	<time datetime="2020-11-29T09:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-29</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/29/Mysql%E4%B8%8EOracle%E7%9A%84JDBC%E4%BF%A1%E6%81%AF/">Mysql与Oracle的JDBC信息</a>
+    <h1 class="article-title" itemprop="name">
+      @Component,@Controller,@Service,@Repository详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2021-02-04T07:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+</a>
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>@Component</strong></p>
+<p>用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。</p>
+<p><strong>@Controller</strong></p>
+<p>用来表示一个web控制层bean，如SpringMvc中的控制器。</p>
+<p><strong>@Service</strong></p>
+<p>用来表示一个业务层bean。</p>
+<a id="more"></a>
+
+<p><strong>@Repository</strong></p>
+<p>用来表示一个持久层bean，即数据访问层DAO组件。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_jpg/TNUwKhV0JpSlyNROtQqDiaF87MZXejHhhp99TxxicS5Wn3Uj7uC6dy6gKeOiaNg16qsqngauXGdib7B0e7icDhfz51w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>需要注意的是@Controller，@Service，@Repository都有带@Component父注解，说明它们除了基本组件的属性外还有其他的的场景应用，即如果不用SpringMVC其实它们就是一个普通的组件，但普通组件建议最好还是用@Component修饰。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/TNUwKhV0JpSlyNROtQqDiaF87MZXejHhhicgRfjNVkuVqufPnEdWA8XcMZUEECoegvGSUJwFzZ9gfrX7jiarWtMJg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>为了让Spring自动扫描注册这些组件，需要在配置文件中加上扫描的配置，如扫描com.test包下的注解。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;com.test&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>些扫描配置默认use-default-filters=”true”，默认扫描@Component注解及子注解，可以配置过滤只扫描哪些注解不扫描哪些注解。</p>
+<p>要过滤扫描注解，需要相应的带上下面的子标签，可以有多个。</p>
+<p><code>&lt;context:include-filter&gt;</code></p>
+<p><code>&lt;context:exclude-filter&gt;</code></p>
+<p>如只扫描com.test包下的@Controller和@Service注解的组件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;com.test&quot;</span> <span class="attr">use-default-filters</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">&quot;annotation&quot;</span> <span class="attr">expression</span>=<span class="string">&quot;org.springframework.stereotype.Controller&quot;</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">&quot;annotation&quot;</span> <span class="attr">expression</span>=<span class="string">&quot;org.springframework.stereotype.Service&quot;</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>关于type的定义</p>
+<table>
+<thead>
+<tr>
+<th><strong>Filter Type</strong></th>
+<th><strong>Examples Expression</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>annotation</td>
+<td>org.example.SomeAnnotation</td>
+<td>符合SomeAnnoation的target class</td>
+</tr>
+<tr>
+<td>assignable</td>
+<td>org.example.SomeClass</td>
+<td>指定class或interface的全名</td>
+</tr>
+<tr>
+<td>aspectj</td>
+<td>org.example..*Service+</td>
+<td>AspectJ语法</td>
+</tr>
+<tr>
+<td>regex</td>
+<td>org.example.Default.*</td>
+<td>Regelar Expression</td>
+</tr>
+<tr>
+<td>custom</td>
+<td>org.example.MyTypeFilter</td>
+<td>自定义Type，实现接口org.springframework.core.type.TypeFilter</td>
+</tr>
+</tbody></table>
+<p>另外，<code>&lt;context:component-scan&gt;</code>配置可以有多个。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏噢老板ovo<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/epay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JDBC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
 	</div>
+	  
+      
 
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          什么是Spring Bean？
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">什么是IOC？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -257,9 +461,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
