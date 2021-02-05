@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 25
+			总文章数 28
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -217,6 +217,288 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/11/29/%E9%9A%8F%E7%AC%94/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot自动装配原理再解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E5%86%8D%E8%A7%A3/">SpringBoot自动装配原理再解</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E5%86%8D%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2021-02-05T06:15:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>精髓：</strong></p>
+<ul>
+<li><p>SpringBoot启动会加载大量的自动配置类（其下有很多类似Dog dog组件加载进入容器）</p>
+</li>
+<li><p>可以先写出配置，之后去返回类寻找方法。</p>
+</li>
+<li><p>核心文件：</p>
+<ul>
+<li><p>XXXXAutoConfiguration：<strong>自动配置类</strong>；给容器中添加组件</p>
+</li>
+<li><p>XXXXProperties：封装配置文件中相关的属性，让我们在配置文件中写入某个值就能改变类的值（类似dog 和 Dog）；</p></li></ul></li></ul>
+        
+          <a class="article-more-a" href="/2021/02/05/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E5%86%8D%E8%A7%A3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E5%86%8D%E8%A7%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-多环境配置及配置文件位置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE/">多环境配置及配置文件位置</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2021-02-05T06:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="方法一：通过不同位置优先级对配置进行覆盖"><a href="#方法一：通过不同位置优先级对配置进行覆盖" class="headerlink" title="方法一：通过不同位置优先级对配置进行覆盖"></a>方法一：通过不同位置优先级对配置进行覆盖</h3><p>配置文件application.yml可以出现在四个位置</p>
+<ol>
+<li><code>file：./config/</code> 指的是项目路径</li>
+<li><code>file：./</code></li>
+<li><code>classpath：/config/</code> 指的是类路径</li>
+<li><code>classpath：/</code></li>
+</ol>
+        
+          <a class="article-more-a" href="/2021/02/05/%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-松散绑定，JSR303校验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/">松散绑定，JSR303校验</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/" class="archive-article-date">
+  	<time datetime="2021-02-05T06:12:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th></th>
+<th>@ConfigurationProperties</th>
+<th>@Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>功能</td>
+<td>批量注入配置文件中的属性</td>
+<td>一个个指定</td>
+</tr>
+<tr>
+<td>松散绑定（松散语法）</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>SpEl</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>JSR303数据校验</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>复杂类型封装</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody></table>
+<h3 id="松散绑定"><a href="#松散绑定" class="headerlink" title="松散绑定"></a>松散绑定</h3><ul>
+<li><p>松散绑定：这是什么意思呢？比如我再yml中写的是first-name，这个和firstName是一样的，-<del>后面跟着的字母默认是大写的</del>。这就是松散绑定</p></li></ul>
+        
+          <a class="article-more-a" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/">展开全文 >></a>
         </p>
       
 
@@ -479,254 +761,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是Spring-Bean？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">什么是Spring Bean？</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-04T07:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Bean是Spring框架中<strong>最核心</strong>的两个概念之一（另一个是<strong>面向切面编程AOP</strong>）。</p>
-<p>是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。</p>
-<p>遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。</p>
-<p>那么，Spring bean 到底是什么？</p>
-<p>接下来我们用图文方式来解析这一个概念。</p>
-        
-          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-@Component,@Controller,@Service,@Repository详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">@Component,@Controller,@Service,@Repository详解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-04T07:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>@Component</strong></p>
-<p>用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。</p>
-<p><strong>@Controller</strong></p>
-<p>用来表示一个web控制层bean，如SpringMvc中的控制器。</p>
-<p><strong>@Service</strong></p>
-<p>用来表示一个业务层bean。</p>
-        
-          <a class="article-more-a" href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是IOC？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">什么是IOC？</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-03T09:17:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><strong>控制反转</strong>（Inversion of Control，缩写为<strong>IoC</strong>），</p>
-<p>是<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=458310&ss_c=ssc.citiao.link">面向对象编程</a>中的一种设计原则，可以用来减低计算机代码之间的<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8596061&ss_c=ssc.citiao.link">耦合度</a>。</p>
-<p>其中最常见的方式叫做<strong>依赖注入</strong>（Dependency Injection，简称<strong>DI</strong>），还有一种方式叫“依赖查找”（Dependency Lookup）。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">展开全文 >></a>
         </p>
       
 
