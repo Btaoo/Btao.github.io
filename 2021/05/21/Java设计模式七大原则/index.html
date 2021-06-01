@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020/9 | Btao的博客</title>
+  <title>Java面向对象七大原则 | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Btao的博客">
-<meta property="og:url" content="http://example.com/archives/2020/09/index.html">
+  <meta name="description" content="简介Java面向对象设计有七大原则。 开闭原则，里氏替换原则，迪米特法则，接口分隔原则，单一职责原则，依赖倒置原则，组合&#x2F;聚合复用原则。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面向对象七大原则">
+<meta property="og:url" content="http://example.com/2021/05/21/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="我的个人博客">
+<meta property="og:description" content="简介Java面向对象设计有七大原则。 开闭原则，里氏替换原则，迪米特法则，接口分隔原则，单一职责原则，依赖倒置原则，组合&#x2F;聚合复用原则。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-21T00:45:52.000Z">
+<meta property="article:modified_time" content="2021-06-01T00:13:12.229Z">
 <meta property="article:author" content="B_tao">
+<meta property="article:tag" content="OOP">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Java Design">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Btao的博客" type="application/atom+xml">
@@ -165,100 +170,248 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java设计模式七大原则" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/MySQL%E5%8D%B8%E8%BD%BD%E4%B8%8E%E6%9B%B4%E6%96%B0/" class="archive-article-date">
-  	<time datetime="2020-09-28T12:22:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/MySQL%E5%8D%B8%E8%BD%BD%E4%B8%8E%E6%9B%B4%E6%96%B0/">MySQL卸载与更新</a>
+    <h1 class="article-title" itemprop="name">
+      Java面向对象七大原则
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/05/21/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/" class="archive-article-date">
+  	<time datetime="2021-05-21T00:45:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-21</time>
+</a>
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Java面向对象设计有七大原则。</p>
+<p>开闭原则，里氏替换原则，迪米特法则，接口分隔原则，单一职责原则，依赖倒置原则，组合/聚合复用原则。</p>
+<a id="more"></a>
+
+<h3 id="一、开闭原则（The-Open-Closed-Principle，OCP）"><a href="#一、开闭原则（The-Open-Closed-Principle，OCP）" class="headerlink" title="一、开闭原则（The Open-Closed Principle，OCP）"></a>一、开闭原则（The Open-Closed Principle，OCP）</h3><blockquote>
+<p>对<strong>扩展</strong>开放，对<strong>修改</strong>关闭。</p>
+</blockquote>
+<h3 id="二、里氏替换原则（Liskov-Substitution-Principle，LSP）"><a href="#二、里氏替换原则（Liskov-Substitution-Principle，LSP）" class="headerlink" title="二、里氏替换原则（Liskov Substitution Principle，LSP）"></a>二、里氏替换原则（Liskov Substitution Principle，LSP）</h3><blockquote>
+<p>所有<strong>基类</strong>都能透明直接地使用<strong>派生类</strong>的对象，而不需通过if-else语句实现。</p>
+<p>派生类应当可以替换基类并出现在基类能够出现的任何地方。</p>
+<p>或者说如果我们把代码中使用基类的地方用它的派生类所代替，代码还能正常工作。</p>
+</blockquote>
+<h3 id="三、迪米特法则（Law-of-Demeter-，LoD）"><a href="#三、迪米特法则（Law-of-Demeter-，LoD）" class="headerlink" title="三、迪米特法则（Law of Demeter ，LoD）"></a>三、迪米特法则（Law of Demeter ，LoD）</h3><blockquote>
+<p>最少知道原则，要求尽可能的减少类于类之间的依赖关系。</p>
+<p>每一个软件单位对其他的单位都只有<strong>最少</strong>的知识，而且局限于那些与<strong>本单位密切相关</strong>的软件单位</p>
+<p>只对于本类密切相关的类建立依赖关系。（低耦合，高内聚）</p>
+</blockquote>
+<h3 id="四、接口分隔原则（Interface-Segregation-Principle-，ISP）"><a href="#四、接口分隔原则（Interface-Segregation-Principle-，ISP）" class="headerlink" title="四、接口分隔原则（Interface Segregation Principle ，ISP）"></a>四、接口分隔原则（Interface Segregation Principle ，ISP）</h3><blockquote>
+<p>接口中只含有必要的方法，当一个接口中某种方法始终未被用户调用，则成这个接口过胖，应该细化接口。接口中的方法尽量的少。</p>
+</blockquote>
+<h3 id="五、单一职责原则（Single-Responsibility-Principle，SRP）"><a href="#五、单一职责原则（Single-Responsibility-Principle，SRP）" class="headerlink" title="五、单一职责原则（Single Responsibility Principle，SRP）"></a>五、单一职责原则（Single Responsibility Principle，SRP）</h3><blockquote>
+<p>一个类只负责一项<strong>职责</strong>。不要过于庞大。</p>
+<p>单一职责是所有类范围，接口分隔是接口范围。</p>
+</blockquote>
+<h3 id="六、依赖倒置原则（Dependency-Inversion-Principle-，DIP）"><a href="#六、依赖倒置原则（Dependency-Inversion-Principle-，DIP）" class="headerlink" title="六、依赖倒置原则（Dependency Inversion Principle ，DIP）"></a>六、依赖倒置原则（Dependency Inversion Principle ，DIP）</h3><blockquote>
+<p>高层不在依赖低层，二者都依赖于抽象（接口）。</p>
+<p>面向接口编程，而不面向实现编程。</p>
+</blockquote>
+<p><strong>依赖：</strong>在程序设计中，如果一个模块 a 使用/调用了另一个模块 b，我们称模块 a 依赖模块 b。</p>
+<p><strong>高层模块与低层模块：</strong>往往在一个应用程序中，我们有一些低层次的类，这些类实现了一些基本的或初级的操作，我们称之为低层模块；另外有一些高层次的类，这些类封装了某些复杂的逻辑，并且依赖于低层次的类，这些类我们称之为高层模块。</p>
+<p><strong>依赖倒置（Dependency Inversion）：</strong>面向对象程序设计相对于面向过程（结构化）程序设计而言，依赖关系被倒置了。因为传统的结构化程序设计中，高层模块总是依赖于低层模块。</p>
+<h3 id="七、组合-聚合复用原则（Composite-Aggregate-Reuse-Principle，CARP）"><a href="#七、组合-聚合复用原则（Composite-Aggregate-Reuse-Principle，CARP）" class="headerlink" title="七、组合/聚合复用原则（Composite/Aggregate Reuse Principle，CARP）"></a>七、组合/聚合复用原则（Composite/Aggregate Reuse Principle，CARP）</h3><blockquote>
+<p>尽量使用组合/聚合，不要使用类继承</p>
+</blockquote>
+<p>​    即在一个新的对象里面使用一些已有的对象，使之成为新对象的一部分，新对象通过向这些对象的委派达到复用已有功能的目的。就是说要尽量的使用合成和聚合，而不是继承关系达到复用的目的。</p>
+<p>​    在继承结构中，父类的内部细节对于子类是可见的。所以通过继承的代码复用是一种白盒式代码复用。如果基类的实现发生改变，那么派生类的实现也将随之改变。这样就导致了子类行为的不可预知性；</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏噢老板ovo<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/epay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">OOP</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/22/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-09-22T15:12:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/22/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">如何用hexo搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java Design</a>
         		</li>
       		
 		</ul>
 	</div>
+	  
+      
 
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/21/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/05/21/Java%E4%B8%AD23%E4%B8%AD%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java中23种设计模式
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2021/02/05/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E5%86%8D%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot自动装配原理再解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99%EF%BC%88The-Open-Closed-Principle%EF%BC%8COCP%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">一、开闭原则（The Open-Closed Principle，OCP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99%EF%BC%88Liskov-Substitution-Principle%EF%BC%8CLSP%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">二、里氏替换原则（Liskov Substitution Principle，LSP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99%EF%BC%88Law-of-Demeter-%EF%BC%8CLoD%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">三、迪米特法则（Law of Demeter ，LoD）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8E%A5%E5%8F%A3%E5%88%86%E9%9A%94%E5%8E%9F%E5%88%99%EF%BC%88Interface-Segregation-Principle-%EF%BC%8CISP%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、接口分隔原则（Interface Segregation Principle ，ISP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99%EF%BC%88Single-Responsibility-Principle%EF%BC%8CSRP%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">五、单一职责原则（Single Responsibility Principle，SRP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99%EF%BC%88Dependency-Inversion-Principle-%EF%BC%8CDIP%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">六、依赖倒置原则（Dependency Inversion Principle ，DIP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%BB%84%E5%90%88-%E8%81%9A%E5%90%88%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99%EF%BC%88Composite-Aggregate-Reuse-Principle%EF%BC%8CCARP%EF%BC%89"><span class="toc-number">1.7.</span> <span class="toc-text">七、组合&#x2F;聚合复用原则（Composite&#x2F;Aggregate Reuse Principle，CARP）</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -288,8 +441,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
