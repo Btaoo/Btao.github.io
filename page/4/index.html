@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 38
+			总文章数 46
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-通过yaml给实体类赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-松散绑定，JSR303校验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/">如何通过yaml给实体类赋值</a>
+      <a class="article-title" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/">松散绑定，JSR303校验</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/" class="archive-article-date">
+  	<time datetime="2021-02-05T06:12:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
 </a>
 
         
@@ -188,9 +188,122 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>xxx.yml</strong>：</p>
+        <table>
+<thead>
+<tr>
+<th></th>
+<th>@ConfigurationProperties</th>
+<th>@Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>功能</td>
+<td>批量注入配置文件中的属性</td>
+<td>一个个指定</td>
+</tr>
+<tr>
+<td>松散绑定（松散语法）</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>SpEl</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>JSR303数据校验</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>复杂类型封装</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody></table>
+<h3 id="松散绑定"><a href="#松散绑定" class="headerlink" title="松散绑定"></a>松散绑定</h3><ul>
+<li><p>松散绑定：这是什么意思呢？比如我再yml中写的是first-name，这个和firstName是一样的，-<del>后面跟着的字母默认是大写的</del>。这就是松散绑定</p></li></ul>
         
-          <a class="article-more-a" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/#more">more >></a>
+          <a class="article-more-a" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/%E6%9D%BE%E6%95%A3%E7%BB%91%E5%AE%9A%EF%BC%8CJSR303%E6%A0%A1%E9%AA%8C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-(转)Spring中Bean的自动装配实现及注解实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">(转)Spring中Bean的自动装配实现及注解实现</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2021-02-04T09:08:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本节我们来介绍Bean的自动装配，自动装配指的是使用spring满足bean依赖的一种方法 ，spring会在应用上下文中为某个bean寻找其依赖的bean。</p>
+<p>在对Bean的自动装配介绍之前，我们先搭建要测试的环境，如下：</p>
+        
+          <a class="article-more-a" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/#more">more >></a>
         
       
 
@@ -208,7 +321,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">yaml</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
         		</li>
       		
 		</ul>
@@ -218,7 +331,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
         </p>
       
 
@@ -248,20 +361,20 @@
 
 
   
-    <article id="post-Spring中byname和bytype总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Spring注解的默认的bean的id" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/">Spring中byname和bytype总结</a>
+      <a class="article-title" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/">Spring注解的默认的bean的id?</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/" class="archive-article-date">
+  	<time datetime="2021-02-04T08:40:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
 </a>
 
         
@@ -269,168 +382,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先，区分清楚什么是byType，什么是byName。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userServiceImpl&quot;</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">&quot;cn.com.bochy.service.impl.UserServiceImpl&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">autowire</span>=<span class="string">&quot;byName&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;userDao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;cn.com.bochy.dao.impl.UserDaoImpl&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p><strong>Spring使用注解的时候的默认命名规则</strong></p>
+<ul>
+<li><p>我们使用注解配置bean的时候，并没有指定bean的id,那么spring帮我们创建bean的时候会给一个默认的id, id为类名首字母小写；</p>
+</li>
+<li><p>如TestController-&gt; testController。</p>
+</li>
+<li><p>我们也可以指定bean的名称(id)，使用注解的value属性；</p>
+</li>
+<li><p>如@Component(value=”myService”)。</p>
+</li>
+</ul>
         
-          <a class="article-more-a" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于@Autowired,@Qualifier注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Autowired,@Qualifier%E6%B3%A8%E8%A7%A3/">关于@Autowired,@Qualifier注解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/%E5%85%B3%E4%BA%8E@Autowired,@Qualifier%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:01:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Autowired注解作用："><a href="#Autowired注解作用：" class="headerlink" title="@Autowired注解作用："></a><strong>@Autowired注解作用</strong>：</h3><p>这个注解就是<em>spring</em>可以自动帮你把<em>bean</em>里面引用的对象的<em>setter/getter</em>方法省略，它会自动帮你<em>set/get</em>。初始化类的对象。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userService&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;userDao&quot;</span>&gt;</span></span><br><span class="line">		 	<span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">&quot;userDao&quot;</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这样你在<em>userService</em>里面要做一个<em>userDao</em>的<em>setter/getter</em>方法。</p>
-<p>但如果你用了*@Autowired<em>的话，你只需要在</em>UserService*的实现类中声明即可。</p>
-        
-          <a class="article-more-a" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Autowired,@Qualifier%E6%B3%A8%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Autowired,@Qualifier%E6%B3%A8%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是SpEl？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/">什么是SpEl？</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:01:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="SpEl-Spring表达式语言"><a href="#SpEl-Spring表达式语言" class="headerlink" title="SpEl (Spring表达式语言 )"></a>SpEl (Spring表达式语言 )</h2><h3 id="什么是SpEl？"><a href="#什么是SpEl？" class="headerlink" title="什么是SpEl？"></a>什么是SpEl？</h3>
-        
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/#more">more >></a>
+          <a class="article-more-a" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/#more">more >></a>
         
       
 
@@ -448,7 +412,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpEl</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
         		</li>
       		
 		</ul>
@@ -458,7 +422,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/">展开全文 >></a>
         </p>
       
 
@@ -488,20 +452,20 @@
 
 
   
-    <article id="post-关于@Value注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Spring中Bean自动装配的几种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Value%E6%B3%A8%E8%A7%A3/">关于@Value注解</a>
+      <a class="article-title" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">Spring中Bean自动装配的几种方式</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E5%85%B3%E4%BA%8E@Value%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-03T06:59:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2021-02-04T08:24:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
 </a>
 
         
@@ -509,9 +473,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id><a href="#" class="headerlink" title></a></h1><p>@Value注解作用：</p>
+        <p>Spring3.0以后的版本中，Bean自动装配的有以下几种方式：</p>
+<p>autowire参数</p>
+<ol>
+<li>byName 根据id/name</li>
+<li>byType 根据类名</li>
+<li>constructor 根据构造参数</li>
+<li>no 人工指定（默认）</li>
+</ol>
+<p>autodetect方法在3.0版本以后已被遗弃</p>
         
-          <a class="article-more-a" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Value%E6%B3%A8%E8%A7%A3/#more">more >></a>
+          <a class="article-more-a" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/#more">more >></a>
         
       
 
@@ -527,6 +499,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -535,7 +511,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E5%85%B3%E4%BA%8E@Value%E6%B3%A8%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">展开全文 >></a>
         </p>
       
 
@@ -565,20 +541,20 @@
 
 
   
-    <article id="post-SpringBoot配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-什么是Spring-Bean？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/">SpringBoot配置</a>
+      <a class="article-title" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">什么是Spring Bean？</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-02-03T06:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" class="archive-article-date">
+  	<time datetime="2021-02-04T07:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
 </a>
 
         
@@ -586,20 +562,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a><strong>配置文件</strong></h3><p>SpringBoot使用一个全局的配置文件，配置文件的名称是固定的</p>
-<ul>
-<li>application.properties<ul>
-<li>语法结构： <code>key=value</code></li>
-</ul>
-</li>
-<li>application.yml<ul>
-<li>语法结构：<code>key:空格 value</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>配置文件的作用</strong>：修改SpringBoot自动配置的默认值，因为SpringBoot在底层都给我们自动配置好了；</p>
+        <p>Bean是Spring框架中<strong>最核心</strong>的两个概念之一（另一个是<strong>面向切面编程AOP</strong>）。</p>
+<p>是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。</p>
+<p>遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。</p>
+<p>那么，Spring bean 到底是什么？</p>
+<p>接下来我们用图文方式来解析这一个概念。</p>
         
-          <a class="article-more-a" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/#more">more >></a>
+          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/#more">more >></a>
         
       
 
@@ -615,6 +584,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -623,7 +596,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">展开全文 >></a>
         </p>
       
 
@@ -653,20 +626,20 @@
 
 
   
-    <article id="post-SpringBoot自动装配原理浅谈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-注解@Component,@Controller,@Service,@Repository详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/">SpringBoot自动装配原理浅谈</a>
+      <a class="article-title" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">注解@Component,@Controller,@Service,@Repository详解</a>
     </h1>
   
 
         
-        <a href="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/" class="archive-article-date">
-  	<time datetime="2021-02-01T04:29:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
+        <a href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2021-02-04T07:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
 </a>
 
         
@@ -674,13 +647,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>pom.xml</strong></p>
-<ul>
-<li>spring-boot-dependencies：核心依赖再父工程中。管理jar包版本，资源过滤，插件…</li>
-<li>我们在写或者引入一些SpringBoot依赖的时候不需要指定版本，就是因为这些版本仓库</li>
-</ul>
+        <h1 id="官方语录"><a href="#官方语录" class="headerlink" title="官方语录"></a>官方语录</h1><h3 id="官网引用-Repository，-Component"><a href="#官网引用-Repository，-Component" class="headerlink" title="官网引用@Repository，@Component"></a>官网引用@Repository，@Component</h3><p>引用spring的官方文档中的一段描述：</p>
+<p>在Spring2.0之前的版本中，<code>@Repository</code>注解可以标记在任何的类上，用来表明该类是用来执行与数据库相关的操作（即dao对象），并支持自动处理数据库操作产生的异常</p>
+<p>在Spring2.5版本中，引入了更多的Spring类注解：<code>@Component</code>,<code>@Service</code>,<code>@Controller</code>。<code>@Component</code>是一个通用的Spring容器管理的单例bean组件。而<code>@Repository</code>, <code>@Service</code>, <code>@Controller</code>就是针对不同的使用场景所采取的特定功能化的注解组件。</p>
+<p>因此，当你的一个类被<code>@Component</code>所注解，那么就意味着同样可以用<code>@Repository</code>, <code>@Service</code>, <code>@Controller</code>来替代它，同时这些注解会具备有更多的功能，而且功能各异。</p>
+<p>最后，如果你不知道要在项目的业务层采用<code>@Service</code>还是<code>@Component</code>注解。那么，<code>@Service</code>是一个更好的选择。</p>
+<p>就如上文所说的，<code>@Repository</code>早已被支持了在你的持久层作为一个标记可以去自动处理数据库操作产生的异常（译者注：因为原生的java操作数据库所产生的异常只定义了几种，但是产生数据库异常的原因却有很多种，这样对于数据库操作的报错排查造成了一定的影响；而Spring拓展了原生的持久层异常，针对不同的产生原因有了更多的异常进行描述。所以，在注解了<code>@Repository</code>的类上如果数据库操作中抛出了异常，就能对其进行处理，转而抛出的是翻译后的spring专属数据库异常，方便我们对异常进行排查处理）。</p>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Component</td>
+<td>最普通的组件，可以被注入到spring容器进行管理</td>
+</tr>
+<tr>
+<td>@Repository</td>
+<td>作用于持久层</td>
+</tr>
+<tr>
+<td>@Service</td>
+<td>作用于业务逻辑层</td>
+</tr>
+<tr>
+<td>@Controller</td>
+<td>作用于表现层（spring-mvc的注解）</td>
+</tr>
+</tbody></table>
+<p><strong>@Component</strong></p>
+<p>用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。</p>
+<p><strong>@Controller</strong></p>
+<p>用来表示一个web控制层bean，如SpringMvc中的控制器。</p>
+<p><strong>@Service</strong></p>
+<p>用来表示一个业务层bean。</p>
         
-          <a class="article-more-a" href="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/#more">more >></a>
+          <a class="article-more-a" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/#more">more >></a>
         
       
 
@@ -696,6 +700,14 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSM</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -704,7 +716,88 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/01/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86%E6%B5%85%E8%B0%88/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-什么是IOC？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">什么是IOC？</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/" class="archive-article-date">
+  	<time datetime="2021-02-03T09:17:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>控制反转</strong>（Inversion of Control，缩写为<strong>IoC</strong>），</p>
+<p>是<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=458310&ss_c=ssc.citiao.link">面向对象编程</a>中的一种设计原则，可以用来减低计算机代码之间的<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8596061&ss_c=ssc.citiao.link">耦合度</a>。</p>
+<p>其中最常见的方式叫做<strong>依赖注入</strong>（Dependency Injection，简称<strong>DI</strong>），还有一种方式叫“依赖查找”（Dependency Lookup）。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">展开全文 >></a>
         </p>
       
 
@@ -736,7 +829,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
+      <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
     </nav>
   
 
@@ -940,6 +1033,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JSP</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RestFul</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Reflect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">druid</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -1005,7 +1126,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">我名叫B_tao&lt;br&gt;&lt;br&gt;感谢你来参观我的博客&lt;br&gt;希望我的文章对你有帮助</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">我名叫B_tao&lt;br/&gt;真名叫仲*韬&lt;br/&gt;感谢你来参观我的博客&lt;br/&gt;希望我的文章对你有帮助</div>
   	  	
     	</section>
     
