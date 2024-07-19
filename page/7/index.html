@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 60
+			总文章数 79
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-通过yaml给实体类赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-(转)注解@Autowired和@Resource区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/">如何通过yaml给实体类赋值</a>
+      <a class="article-title" href="/2022/02/25/(%E8%BD%AC)%E6%B3%A8%E8%A7%A3@Autowired%E5%92%8C@Resource%E5%8C%BA%E5%88%AB/">(转)注解@Autowired和@Resource区别</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2022/02/25/(%E8%BD%AC)%E6%B3%A8%E8%A7%A3@Autowired%E5%92%8C@Resource%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2022-02-25T03:40:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
 </a>
 
         
@@ -188,173 +188,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>xxx.yml</strong>：</p>
-        
-          <a class="article-more-a" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/#more">more >></a>
-        
-      
+        <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tianynnb/article/details/120729580">https://blog.csdn.net/tianynnb/article/details/120729580</a></p>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">yaml</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E9%80%9A%E8%BF%87yaml%E7%BB%99%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%B5%8B%E5%80%BC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring中byname和bytype总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/">Spring中byname和bytype总结</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先，区分清楚什么是byType，什么是byName。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userServiceImpl&quot;</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">&quot;cn.com.bochy.service.impl.UserServiceImpl&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">autowire</span>=<span class="string">&quot;byName&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;userDao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;cn.com.bochy.dao.impl.UserDaoImpl&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/Spring%E4%B8%ADbyname%E5%92%8Cbytype%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-注解@Autowired,@Qualifier详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Autowired,@Qualifier%E8%AF%A6%E8%A7%A3/">注解@Autowired,@Qualifier详解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Autowired,@Qualifier%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:01:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Autowired注解作用："><a href="#Autowired注解作用：" class="headerlink" title="@Autowired注解作用："></a><strong>@Autowired注解作用</strong>：</h3><p>这个注解就是<em>spring</em>可以自动帮你把<em>bean</em>里面引用的对象的<em>setter/getter</em>方法省略，它会自动帮你<em>set/get</em>。初始化类的对象。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userService&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;userDao&quot;</span>&gt;</span></span><br><span class="line">		 	<span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">&quot;userDao&quot;</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这样你在<em>userService</em>里面要做一个<em>userDao</em>的<em>setter/getter</em>方法。</p>
-<p>但如果你用了*@Autowired<em>的话，你只需要在</em>UserService*的实现类中声明即可。</p>
-        
-          <a class="article-more-a" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Autowired,@Qualifier%E8%AF%A6%E8%A7%A3/#more">more >></a>
-        
       
 
       
@@ -385,7 +220,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Autowired,@Qualifier%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/02/25/(%E8%BD%AC)%E6%B3%A8%E8%A7%A3@Autowired%E5%92%8C@Resource%E5%8C%BA%E5%88%AB/">展开全文 >></a>
         </p>
       
 
@@ -415,20 +250,20 @@
 
 
   
-    <article id="post-什么是SpEl？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-毕业实习-JavaSE学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/">什么是SpEl？</a>
+      <a class="article-title" href="/2022/02/24/%E6%AF%95%E4%B8%9A%E5%AE%9E%E4%B9%A0-JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">毕业实习-JavaSE学习笔记</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-03T07:01:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2022/02/24/%E6%AF%95%E4%B8%9A%E5%AE%9E%E4%B9%A0-JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2022-02-24T01:49:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-24</time>
 </a>
 
         
@@ -436,9 +271,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SpEl-Spring表达式语言"><a href="#SpEl-Spring表达式语言" class="headerlink" title="SpEl (Spring表达式语言 )"></a>SpEl (Spring表达式语言 )</h2><h3 id="什么是SpEl？"><a href="#什么是SpEl？" class="headerlink" title="什么是SpEl？"></a>什么是SpEl？</h3>
+        <h2 id="1-serverlet"><a href="#1-serverlet" class="headerlink" title="1.serverlet"></a>1.serverlet</h2><h4 id="练习01"><a href="#练习01" class="headerlink" title="练习01"></a>练习01</h4><h5 id="练习需求："><a href="#练习需求：" class="headerlink" title="练习需求："></a>练习需求：</h5><p>​    文件下载的需求<br>​        1.页面显示超链接<br>​        2.点击超链接后弹出下载提示框<br>​        3.完成图片下载</p>
+<pre><code>分析:
+    1.超链接指向的资源如果能够被浏览器解析，则在浏览器中显示，如果不能解析，
+    则弹出下载提示框，不满足需求
+    2.任何资源都必须弹出下载提示框
+    3.使用响应头设置资源的打开方式：
+        Content-disposition:attachment;filename=xxx</code></pre>
         
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/#more">more >></a>
+          <a class="article-more-a" href="/2022/02/24/%E6%AF%95%E4%B8%9A%E5%AE%9E%E4%B9%A0-JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more">more >></a>
         
       
 
@@ -452,11 +293,27 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Web</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpEl</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Cookie</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Session</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JSP</a>
         		</li>
       		
 		</ul>
@@ -466,7 +323,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFSpEl%EF%BC%9F/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/02/24/%E6%AF%95%E4%B8%9A%E5%AE%9E%E4%B9%A0-JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -496,20 +353,20 @@
 
 
   
-    <article id="post-注解@Value注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Forward（直接转发）和Redirect（间接转发）区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Value%E6%B3%A8%E8%A7%A3/">注解@Value注解</a>
+      <a class="article-title" href="/2022/02/10/Forward%EF%BC%88%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%92%8CRedirect%EF%BC%88%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%8C%BA%E5%88%AB/">Forward（转发）和Redirect（重定向）区别</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Value%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-03T06:59:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2022/02/10/Forward%EF%BC%88%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%92%8CRedirect%EF%BC%88%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2022-02-10T09:45:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-10</time>
 </a>
 
         
@@ -517,9 +374,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id><a href="#" class="headerlink" title></a></h1><p>@Value注解作用：</p>
+        <h1 id="Forward（转发）和Redirect（重定向）区别"><a href="#Forward（转发）和Redirect（重定向）区别" class="headerlink" title="Forward（转发）和Redirect（重定向）区别"></a>Forward（转发）和Redirect（重定向）区别</h1><p>转载：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhuyeshen/p/10951338.html">https://www.cnblogs.com/zhuyeshen/p/10951338.html</a></p>
+<p>Forward转发url不会变，</p>
+<p>Redirect重定向url改变。</p>
         
-          <a class="article-more-a" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Value%E6%B3%A8%E8%A7%A3/#more">more >></a>
+          <a class="article-more-a" href="/2022/02/10/Forward%EF%BC%88%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%92%8CRedirect%EF%BC%88%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%8C%BA%E5%88%AB/#more">more >></a>
         
       
 
@@ -533,15 +392,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
         		</li>
       		
 		</ul>
@@ -551,7 +402,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E6%B3%A8%E8%A7%A3@Value%E6%B3%A8%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/02/10/Forward%EF%BC%88%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%92%8CRedirect%EF%BC%88%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8F%91%EF%BC%89%E5%8C%BA%E5%88%AB/">展开全文 >></a>
         </p>
       
 
@@ -581,20 +432,20 @@
 
 
   
-    <article id="post-SpringBoot配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/">SpringBoot配置</a>
+      <a class="article-title" href="/2021/06/08/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-02-03T06:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2021/06/08/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="archive-article-date">
+  	<time datetime="2021-06-08T01:01:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
 </a>
 
         
@@ -602,20 +453,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a><strong>配置文件</strong></h3><p>SpringBoot使用一个全局的配置文件，配置文件的名称是固定的</p>
-<ul>
-<li>application.properties<ul>
-<li>语法结构： <code>key=value</code></li>
-</ul>
-</li>
-<li>application.yml<ul>
-<li>语法结构：<code>key:空格 value</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>配置文件的作用</strong>：修改SpringBoot自动配置的默认值，因为SpringBoot在底层都给我们自动配置好了；</p>
+        <h2 id="中心思想："><a href="#中心思想：" class="headerlink" title="中心思想："></a>中心思想：</h2><p>1.数组必须有序。</p>
+<p>2.取一个中间值，a[mid]。mid=(low+high)/2。传入一个查询值。</p>
+<p>3.比较查询值与中间值，</p>
+<p>​            查询值比中间值小，则缩小范围到数组左边。high=mid-1；</p>
+<p>​            查询值比中间值大，则缩小范围到中间值右边。low=mid+1；</p>
+<p>4.循环直到查询值等于中间值，或low&gt;high停止。</p>
         
-          <a class="article-more-a" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/08/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/#more">more >></a>
         
       
 
@@ -629,7 +474,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
@@ -639,7 +488,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/SpringBoot%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/08/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">展开全文 >></a>
         </p>
       
 
@@ -669,20 +518,20 @@
 
 
   
-    <article id="post-注解@ResponseBody详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-快排20行" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/01/%E6%B3%A8%E8%A7%A3@ResponseBody%E8%AF%A6%E8%A7%A3/">注解@ResponseBody详解</a>
+      <a class="article-title" href="/2021/06/07/%E5%BF%AB%E6%8E%9220%E8%A1%8C/">快排20行</a>
     </h1>
   
 
         
-        <a href="/2021/02/01/%E6%B3%A8%E8%A7%A3@ResponseBody%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-01T04:24:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
+        <a href="/2021/06/07/%E5%BF%AB%E6%8E%9220%E8%A1%8C/" class="archive-article-date">
+  	<time datetime="2021-06-07T13:08:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-07</time>
 </a>
 
         
@@ -690,10 +539,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>@ResponseBody的作用其实是将java对象转为json格式的数据。</p></li></ul>
+        <h2 id="中心思想："><a href="#中心思想：" class="headerlink" title="中心思想："></a>中心思想：</h2><p>分治，冒泡，挖空</p>
+<p>1.选中一个<strong>基准值</strong>key，将数组排成左边都是<strong>小于基准值</strong>，右边排成<strong>大于基准值</strong>的形式。</p>
+<p>2.对数组的左边，右边分别进行递归处理，重复1操作。</p>
         
-          <a class="article-more-a" href="/2021/02/01/%E6%B3%A8%E8%A7%A3@ResponseBody%E8%AF%A6%E8%A7%A3/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/07/%E5%BF%AB%E6%8E%9220%E8%A1%8C/#more">more >></a>
         
       
 
@@ -707,15 +557,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
@@ -725,7 +571,174 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/01/%E6%B3%A8%E8%A7%A3@ResponseBody%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/07/%E5%BF%AB%E6%8E%9220%E8%A1%8C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS-Tomcat如何实时查看日志" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/06/CentOS-Tomcat%E5%A6%82%E4%BD%95%E5%AE%9E%E6%97%B6%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97/">CentOS Tomcat如何实时查看日志</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/06/CentOS-Tomcat%E5%A6%82%E4%BD%95%E5%AE%9E%E6%97%B6%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97/" class="archive-article-date">
+  	<time datetime="2021-06-06T09:13:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-06</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在linux系统，切换到tomcat的bin目录，依次键入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./shutdown.sh</span><br><span class="line"></span><br><span class="line">./startup.sh</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/06/CentOS-Tomcat%E5%A6%82%E4%BD%95%E5%AE%9E%E6%97%B6%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/06/CentOS-Tomcat%E5%A6%82%E4%BD%95%E5%AE%9E%E6%97%B6%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS-Mysql中出现Warning-Using-a-password-on-the-command-line-interface-can-be-insecure" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/06/CentOS-Mysql%E4%B8%AD%E5%87%BA%E7%8E%B0Warning-Using-a-password-on-the-command-line-interface-can-be-insecure/">CenOS Mysql中出现Warning:Using a password on the command line interface can be insecure</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/06/CentOS-Mysql%E4%B8%AD%E5%87%BA%E7%8E%B0Warning-Using-a-password-on-the-command-line-interface-can-be-insecure/" class="archive-article-date">
+  	<time datetime="2021-06-06T01:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-06</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Linux环境下，使用xtrabackup对mysql进行备份，执行的命令如下：</p>
+<p>#innobackupex -uroot -pabc /usr/local/mysql_backup<br>出现如下错误：</p>
+<blockquote>
+<p>“ [Warning] Usinga password on the command line interface can be insecure.”</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2021/06/06/CentOS-Mysql%E4%B8%AD%E5%87%BA%E7%8E%B0Warning-Using-a-password-on-the-command-line-interface-can-be-insecure/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">CentOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/06/CentOS-Mysql%E4%B8%AD%E5%87%BA%E7%8E%B0Warning-Using-a-password-on-the-command-line-interface-can-be-insecure/">展开全文 >></a>
         </p>
       
 
@@ -757,7 +770,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
+      <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
     </nav>
   
 
@@ -769,7 +782,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 B_tao
+    		&copy; 2024 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -1024,6 +1037,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软考</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Mock测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
             
             <div class="clearfix"></div>

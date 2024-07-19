@@ -16,7 +16,7 @@
 <meta property="og:description" content="1.什么时候使用事务 当在一次请求中，需要同时写入多张表的数据结构或执行多条sql，为了保证操作的原子性（要么同时成功，要么同时失败），我们会用到事务。  总结： 1.一次请求，同时写入多张表的数据结构 2.一次请求，执行多条sql。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-14T06:10:11.000Z">
-<meta property="article:modified_time" content="2022-10-13T03:07:31.501Z">
+<meta property="article:modified_time" content="2022-11-01T06:23:51.957Z">
 <meta property="article:author" content="B_tao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -67,7 +67,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 60
+			总文章数 79
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -241,6 +241,7 @@
 <p>如何解决？</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解决事务失效问题</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertUser5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        jdbcTemplate.update(<span class="string">&quot;INSERT INTO user(id, name) VALUES(1, &#x27;terry&#x27;)&quot;</span>);</span><br><span class="line">        <span class="comment">// 单独处理 , 再创将一个当前类对象，用对象调用方法</span></span><br><span class="line">        UserService o = (UserService)AopContext.currentProxy();</span><br><span class="line">        o.insertRole();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Transactional(rollbackFor = Exception.class)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertRole</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        jdbcTemplate.update(<span class="string">&quot;INSERT INTO role(user_id) VALUES(1)&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span> / <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h1 id="4-事务的四个特征"><a href="#4-事务的四个特征" class="headerlink" title="4.事务的四个特征"></a>4.事务的四个特征</h1><p>事务的四个特性：原子性，一致性，隔离性，持久性</p>
 
       
 
@@ -393,7 +394,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E4%BA%8B%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1.什么时候使用事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E4%BA%8B%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2.使用事务有什么作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E4%BC%9A%E5%A4%B1%E6%95%88%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3.什么情况下事务注解会失效？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%BC%82%E5%B8%B8%E8%A2%AB%E6%8D%95%E6%8D%89-catch-%E4%BA%86"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 异常被捕捉(catch)了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%9E%8B%E6%B2%A1%E5%AF%B9%E5%BA%94-%E6%96%B9%E6%B3%95%E6%8A%9B%E5%87%BA%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%9B%9E%E6%BB%9A%E7%B1%BB%E5%9E%8B%E6%B2%A1%E5%AF%B9%E5%BA%94"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 异常类型没对应(方法抛出类型和回滚类型没对应)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E8%B0%83%E7%94%A8-%EF%BC%88%E5%90%8C%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%B8%AD%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 方法内部调用 （同一个类中方法调用）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E8%B0%83%E7%94%A8%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1方法内部调用事务失效解决方案</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E4%BA%8B%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1.什么时候使用事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E4%BA%8B%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2.使用事务有什么作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E4%BC%9A%E5%A4%B1%E6%95%88%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3.什么情况下事务注解会失效？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%BC%82%E5%B8%B8%E8%A2%AB%E6%8D%95%E6%8D%89-catch-%E4%BA%86"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 异常被捕捉(catch)了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%9E%8B%E6%B2%A1%E5%AF%B9%E5%BA%94-%E6%96%B9%E6%B3%95%E6%8A%9B%E5%87%BA%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%9B%9E%E6%BB%9A%E7%B1%BB%E5%9E%8B%E6%B2%A1%E5%AF%B9%E5%BA%94"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 异常类型没对应(方法抛出类型和回滚类型没对应)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E8%B0%83%E7%94%A8-%EF%BC%88%E5%90%8C%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%B8%AD%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 方法内部调用 （同一个类中方法调用）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E8%B0%83%E7%94%A8%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1方法内部调用事务失效解决方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E4%B8%AA%E7%89%B9%E5%BE%81"><span class="toc-number">4.</span> <span class="toc-text">4.事务的四个特征</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -422,7 +423,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 B_tao
+    		&copy; 2024 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -677,6 +678,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软考</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Mock测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
             
             <div class="clearfix"></div>

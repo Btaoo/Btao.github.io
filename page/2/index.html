@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 60
+			总文章数 79
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-VUE生命周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20240123模板方法设计模式实现通用导入思考过程记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/02/VUE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">VUE生命周期</a>
+      <a class="article-title" href="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">20240123模板方法设计模式实现通用导入思考过程记录</a>
     </h1>
   
 
         
-        <a href="/2022/08/02/VUE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="archive-article-date">
-  	<time datetime="2022-08-02T08:39:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-02</time>
+        <a href="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2024-01-23T08:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-23</time>
 </a>
 
         
@@ -188,10 +188,259 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Vue生命周期如下图所示：</p>
+        <p>1.根据ImportInterface接口封装抽象类AbstractImportExcel，其中应包含接口方法，以及应该实现的controller中整套处理逻辑</p>
+<p><img src="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/image/image-20240110170848383.png" alt="image-20240110170848383"></p>
+<p>2.其他人只需要实现抽象类，就可实现导入功能拓展</p>
+<p>3.考虑controller里怎么调用， 前端传type名称，spaceId，和file流。</p>
+<p>4.根据什么判断是多sheet页？从而实现单sheet页和多sheet页逻辑通过if else分来。（采用type判断？如果某种固定type就采用多sheet页逻辑，固定好模板序号进行解析？</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <a class="article-more-a" href="/2022/08/02/VUE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/#more">more >></a>
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
         
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java如何动态生成不同的类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%8D%E5%90%8C%E7%9A%84%E7%B1%BB/">java如何动态生成不同的类</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%8D%E5%90%8C%E7%9A%84%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2024-01-09T02:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-09</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>java如何动态生成不同的类</p>
+<p>在Java中，可以使用反射机制来动态地创建不同的类。下面是一种常见的方法：</p>
+<ol>
+<li>首先，需要定义一个基本的类模板或者接口作为所有动态生成类的共享部分。这个类模板应该包含需要被动态生成的属性、方法等内容。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>然后，通过使用<code>ClassLoader</code>类加载器来动态生成新的类。可以根据自己的需求选择合适的<code>ClassLoader</code>子类进行操作。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.*;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 获取当前线程上下文的 ClassLoader</span></span><br><span class="line">ClassLoader loader = Thread.currentThread().getContextClassLoader();</span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 指定类名及其完全限定路径（包括包名）</span></span><br><span class="line">    String className = <span class="string">&quot;com.example.DynamicGeneratedClass&quot;</span>;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 使用 ClassLoader 动态加载类</span></span><br><span class="line">    Class&lt;?&gt; dynamicClass = loader.loadClass(className);</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 判断是否为 BaseClass 的子类</span></span><br><span class="line">    <span class="keyword">if</span> (BaseClass.class.isAssignableFrom(dynamicClass)) &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 创建对象并设置属性值</span></span><br><span class="line">      Object instance = dynamicClass.newInstance();</span><br><span class="line">      Method methodSetName = dynamicClass.getMethod(<span class="string">&quot;setName&quot;</span>, String.class);</span><br><span class="line">      methodSetName.invoke(instance, <span class="string">&quot;John&quot;</span>);</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 调用方法获取属性值</span></span><br><span class="line">      Method methodGetName = dynamicClass.getMethod(<span class="string">&quot;getName&quot;</span>);</span><br><span class="line">      String result = (String)methodGetName.invoke(instance);</span><br><span class="line">      </span><br><span class="line">      System.out.println(result);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">&quot;Invalid generated class!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">catch</span> (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>最后，将生成的类保存到特定位置，以供之后重复使用。</li>
+</ol>
+<p>注意事项：</p>
+<ul>
+<li>由于动态生成的类没有源代码，因此无法直接修改已经生成的类。只能通过反射机制间接地修改类的属性和方法。</li>
+<li>动态生成的类必须符合 Java 语言的命名规则和结构要求，否则会导致编译错误。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">反射</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%8D%E5%90%8C%E7%9A%84%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java如何在不知道类类型的时候添加属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E7%9F%A5%E9%81%93%E7%B1%BB%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%97%B6%E5%80%99%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7/">java如何在不知道类类型的时候添加属性</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E7%9F%A5%E9%81%93%E7%B1%BB%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%97%B6%E5%80%99%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2024-01-09T02:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-09</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.*;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个空的Person对象</span></span><br><span class="line">        Person person = <span class="keyword">new</span> Person();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 获取Person类的Class对象</span></span><br><span class="line">        Class&lt;?&gt; clazz = person.getClass();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 定义要添加的属性名称和值</span></span><br><span class="line">        String propertyName = <span class="string">&quot;age&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> ageValue = <span class="number">25</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 通过反射调用setter方法设置属性值</span></span><br><span class="line">        Method setterMethod = clazz.getDeclaredMethod(<span class="string">&quot;set&quot;</span> + capitalizeFirstLetter(propertyName), Integer.class);</span><br><span class="line">        setterMethod.invoke(person, ageValue);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 输出结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Age: &quot;</span> + person.getAge());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">capitalizeFirstLetter</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str == <span class="keyword">null</span> || str.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">char</span> firstChar = Character.toUpperCase(str.charAt(<span class="number">0</span>));</span><br><span class="line">            <span class="keyword">return</span> firstChar + str.substring(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 定义一个Person类作为示例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">反射</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/09/java%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E7%9F%A5%E9%81%93%E7%B1%BB%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%97%B6%E5%80%99%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-单页面和多页面应用区分点总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/14/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%92%8C%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%8C%BA%E5%88%86%E7%82%B9%E6%80%BB%E7%BB%93/">单页面和多页面应用区分点总结</a>
+    </h1>
+  
+
+        
+        <a href="/2023/12/14/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%92%8C%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%8C%BA%E5%88%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2023-12-14T03:27:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-14</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>单页面应用SPA：采用vue路由技术等，切换页面url是前面不变后面变，</p>
+<p>a.com/#/page1 -&gt; a.com/#/page2</p>
+<p><strong>好处：</strong>整个应用程序加载一次，之后在用户与应用程序交互时不会重新加载整个页面，页面只会局部刷新，页面切换快。</p>
+<p>多页面应用MPA：切换页面url会有变化。</p>
+<p>a.com/page1.html -&gt; a.com/page2.html</p>
+<p><strong>好处：</strong>开发简便，方便SEO（被浏览器检索到）优化</p>
+
       
 
       
@@ -214,7 +463,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/02/VUE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">展开全文 >></a>
+          <a class="article-more-a" href="/2023/12/14/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%92%8C%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%8C%BA%E5%88%86%E7%82%B9%E6%80%BB%E7%BB%93/">展开全文 >></a>
         </p>
       
 
@@ -244,20 +493,20 @@
 
 
   
-    <article id="post-前端常用方法-hy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-DM数据库权限基本操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/09/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-hy/">前端常用方法-hy</a>
+      <a class="article-title" href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">DM数据库权限基本操作</a>
     </h1>
   
 
         
-        <a href="/2022/07/09/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-hy/" class="archive-article-date">
-  	<time datetime="2022-07-09T09:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
+        <a href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2023-09-19T02:25:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-19</time>
 </a>
 
         
@@ -265,10 +514,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-Table-表格"><a href="#1-Table-表格" class="headerlink" title="1. Table 表格"></a>1. Table 表格</h1>
-        
-          <a class="article-more-a" href="/2022/07/09/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-hy/#more">more >></a>
-        
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 某个用户下查看全部表</span><br><span class="line"> *&#x2F;</span><br><span class="line"> select * from dba_tables where owner&#x3D;&#39;XQFX&#39;;</span><br><span class="line">   </span><br><span class="line">&#x2F;**</span><br><span class="line"> * 查看某个用户被授予的权限</span><br><span class="line"> *&#x2F;</span><br><span class="line"> SELECT * FROM dba_role_privs WHERE grantee&#x3D;&#39;XQFX&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 查看系统所有角色信息</span><br><span class="line"> *&#x2F;</span><br><span class="line"> </span><br><span class="line"> select * from dba_roles;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 赋权</span><br><span class="line"> *&#x2F;</span><br><span class="line"> grant role to user;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>–内置角色分类<br>DB_AUDIT 开头为审计相关角色，默认赋给了 SYSAUDITOR；</p>
+<p>DB_POLICY 开头的为安全相关角色，默认赋给 SYSSSO；</p>
+<p>其他 DBA、RESOURCE、PULIBC、SOI、VTI 等默认赋给了 SYSDBA。</p>
+<p>DBA：系统管理员角色，拥有除审计和强制访问控制之外的几乎所有权限，</p>
+<p>RESOURCE：拥有 CREATE 创建表、索引、视图等对象定义的权限和数据操作权限（DML 操作）。</p>
+<p>PULIBC：拥有数据操作权限（增删改查操作），没有创建表、视图等对象定义权限。</p>
+<p>SOI：具有查询系统表（SYS 开头的）查询权限，新建用户一般需要赋此权限。</p>
+<p>VTI 具有查询动态视图（v$开头的）权限。`</p>
+</blockquote>
+
       
 
       
@@ -281,11 +541,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hy</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DM</a>
         		</li>
       		
 		</ul>
@@ -295,7 +555,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/09/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-hy/">展开全文 >></a>
+          <a class="article-more-a" href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">展开全文 >></a>
         </p>
       
 
@@ -325,20 +585,20 @@
 
 
   
-    <article id="post-Java工具类-hy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2023软考备考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/09/Java%E5%B7%A5%E5%85%B7%E7%B1%BB-hy/">Java工具类-hy</a>
+      <a class="article-title" href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/">2023软考备考</a>
     </h1>
   
 
         
-        <a href="/2022/07/09/Java%E5%B7%A5%E5%85%B7%E7%B1%BB-hy/" class="archive-article-date">
-  	<time datetime="2022-07-09T03:35:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
+        <a href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/" class="archive-article-date">
+  	<time datetime="2023-08-14T01:14:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
 </a>
 
         
@@ -346,10 +606,98 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-CollectionUtils-（集合工具）"><a href="#1-CollectionUtils-（集合工具）" class="headerlink" title="1. CollectionUtils （集合工具）"></a>1. CollectionUtils （集合工具）</h1>
+        <h1 id="一、软考时间及项目"><a href="#一、软考时间及项目" class="headerlink" title="一、软考时间及项目"></a>一、软考时间及项目</h1><p><img src="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/image/%E4%B8%8B%E8%BD%BD.jpg" alt="下载"></p>
+<h1 id="二、考试项目介绍"><a href="#二、考试项目介绍" class="headerlink" title="二、考试项目介绍"></a>二、考试项目介绍</h1><p><img src="https://pic1.zhimg.com/80/v2-54746e32b468745b6fa46c7805271f16_720w.webp?source=1940ef5c" alt="img"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软考</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <a class="article-more-a" href="/2022/07/09/Java%E5%B7%A5%E5%85%B7%E7%B1%BB-hy/#more">more >></a>
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
         
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-什么是MD5？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/">什么是MD5？</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/" class="archive-article-date">
+  	<time datetime="2022-11-16T06:02:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-16</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、什么是MD5"><a href="#一、什么是MD5" class="headerlink" title="一、什么是MD5?"></a>一、什么是MD5?</h1><blockquote>
+<p>md5的全称是<strong>md5信息摘要算法（英文：MD5 Message-Digest Algorithm ）</strong>，一种被广泛使用的<strong>密码散列函数</strong>，可以<strong>产生一个</strong></p>
+<p><strong>128位（16字节，1字节8位）的散列值</strong>（常见的是用32位的16进制表示，比如：0caa3b23b8da53f9e4e041d95dc8fa2c），</p>
+<p><strong>用于确保信息传输的完整一致</strong>。</p>
+</blockquote>
+<h1 id="二、MD5有什么用？"><a href="#二、MD5有什么用？" class="headerlink" title="二、MD5有什么用？"></a>二、MD5有什么用？</h1><blockquote>
+<p>简述：MD5可以生成任意一个文件或字符串的“数字指纹”，对文件或字符串的微小改动都会直接导致数字指纹的巨大变化。</p>
+</blockquote>
+<blockquote>
+<p>作用：<strong>一致性校验</strong></p>
+<p>1.<strong>密码的加密存储</strong>，用户设置密码时，服务端只记录这个密码的MD5，而不记录密码本身，以后验证用户身份时，只需要将用户输入的密码再次做一下MD5后，与记录的MD5作一个比较即可验证其密码的合法性。</p>
+<p>2.<strong>数字签名</strong>，比如发布一个程序，为了防止别人在你的程序里插入病毒或木马，你可以在发布这个程序的同时，公开这个程序文件的MD5码，这样别人只需要在任何地方下载这个程序后做一次MD5，然后跟公开的这个MD5作一个比较就知道这个程序是否被第三方修改过</p>
+<p>3.<strong>文件完整性验证</strong>，比如当下载一个文件时，服务器返回的信息中包括这个文件的md5，在本地下载完毕时进行md5，将两个md5值进行比较，如果一致则说明文件完整没有丢包现象</p>
+<p>4.<strong>文件上传</strong>，比如百度云实现的秒传，就是对比你上传的文件md5在百度服务器是否已经存在了</p>
+</blockquote>
+
       
 
       
@@ -366,7 +714,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hy</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MD5</a>
         		</li>
       		
 		</ul>
@@ -376,329 +724,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/09/Java%E5%B7%A5%E5%85%B7%E7%B1%BB-hy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JAVA开发知识点-hy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/09/JAVA%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9-hy/">JAVA开发知识点-hy</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/09/JAVA%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9-hy/" class="archive-article-date">
-  	<time datetime="2022-07-09T02:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Q1-为什么find后面还要加queryParamList"><a href="#Q1-为什么find后面还要加queryParamList" class="headerlink" title="Q1. 为什么find后面还要加queryParamList"></a>Q1. 为什么find后面还要加queryParamList</h1>
-        
-          <a class="article-more-a" href="/2022/07/09/JAVA%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9-hy/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/09/JAVA%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9-hy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sourceTree知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/08/sourceTree%E7%9F%A5%E8%AF%86%E7%82%B9/">sourceTree知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/08/sourceTree%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2022-07-08T09:21:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-软合并、混合合并、强制合并区别"><a href="#1-软合并、混合合并、强制合并区别" class="headerlink" title="1. 软合并、混合合并、强制合并区别"></a>1. 软合并、混合合并、强制合并区别</h1><p>软合并：回退，保留已更改文件并保持提交状态</p>
-<p>混合合并：回退，保留已更改文件，但提交状态而是未提交状态</p>
-<p>强制合并：回退，不保存已更改文件，变回之前版本状态。</p>
-        
-          <a class="article-more-a" href="/2022/07/08/sourceTree%E7%9F%A5%E8%AF%86%E7%82%B9/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">sourcetree</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/08/sourceTree%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nvm常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/07/nvm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">nvm常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/07/nvm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2022-07-07T06:50:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-07</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p>nvm ls ：列出所有已安装的 node 版本</p>
-<p>nvm list ：列出所有已安装的 node 版本</p>
-        
-          <a class="article-more-a" href="/2022/07/07/nvm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nvm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/07/nvm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-npm改换地址-hy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/07/npm%E6%94%B9%E6%8D%A2%E5%9C%B0%E5%9D%80-hy/">npm改换地址-hy</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/07/npm%E6%94%B9%E6%8D%A2%E5%9C%B0%E5%9D%80-hy/" class="archive-article-date">
-  	<time datetime="2022-07-07T02:47:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-07</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><strong>可以查看设置的私库地址是否有效</strong></li>
-</ul>
-<p>npm config get registry</p>
-        
-          <a class="article-more-a" href="/2022/07/07/npm%E6%94%B9%E6%8D%A2%E5%9C%B0%E5%9D%80-hy/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/07/npm%E6%94%B9%E6%8D%A2%E5%9C%B0%E5%9D%80-hy/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/">展开全文 >></a>
         </p>
       
 
@@ -730,7 +756,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+      <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
     </nav>
   
 
@@ -742,7 +768,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 B_tao
+    		&copy; 2024 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -997,6 +1023,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软考</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Mock测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
             
             <div class="clearfix"></div>

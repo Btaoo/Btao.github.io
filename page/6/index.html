@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 60
+			总文章数 79
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-(转)Spring中Bean的自动装配实现及注解实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">(转)Spring中Bean的自动装配实现及注解实现</a>
+      <a class="article-title" href="/2022/03/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
     </h1>
   
 
         
-        <a href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2021-02-04T09:08:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+        <a href="/2022/03/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2022-03-15T06:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
         
@@ -188,10 +188,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本节我们来介绍Bean的自动装配，自动装配指的是使用spring满足bean依赖的一种方法 ，spring会在应用上下文中为某个bean寻找其依赖的bean。</p>
-<p>在对Bean的自动装配介绍之前，我们先搭建要测试的环境，如下：</p>
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">概念：</span><br><span class="line">	使用一些</span><br><span class="line">作用：</span><br><span class="line">	快速验证字符串，提取字符串。</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/#more">more >></a>
+          <a class="article-more-a" href="/2022/03/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more">more >></a>
         
       
 
@@ -199,27 +198,12 @@
     </div>
     <div class="article-info article-info-index">
       
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
+      	  
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/(%E8%BD%AC)Spring%E4%B8%ADBean%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%AE%9E%E7%8E%B0%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/03/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">展开全文 >></a>
         </p>
       
 
@@ -249,20 +233,20 @@
 
 
   
-    <article id="post-Spring注解的默认的bean的id" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Http状态码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/">Spring注解的默认的bean的id?</a>
+      <a class="article-title" href="/2022/03/11/Http%E7%8A%B6%E6%80%81%E7%A0%81/">Http状态码</a>
     </h1>
   
 
         
-        <a href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/" class="archive-article-date">
-  	<time datetime="2021-02-04T08:40:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
+        <a href="/2022/03/11/Http%E7%8A%B6%E6%80%81%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2022-03-11T08:12:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-11</time>
 </a>
 
         
@@ -270,310 +254,201 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Spring使用注解的时候的默认命名规则</strong></p>
-<ul>
-<li><p>我们使用注解配置bean的时候，并没有指定bean的id,那么spring帮我们创建bean的时候会给一个默认的id, id为类名首字母小写；</p>
-</li>
-<li><p>如TestController-&gt; testController。</p>
-</li>
-<li><p>我们也可以指定bean的名称(id)，使用注解的value属性；</p>
-</li>
-<li><p>如@Component(value=”myService”)。</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/Spring%E6%B3%A8%E8%A7%A3%E7%9A%84%E9%BB%98%E8%AE%A4%E7%9A%84bean%E7%9A%84id/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring中Bean自动装配的几种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">Spring中Bean自动装配的几种方式</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2021-02-04T08:24:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Spring3.0以后的版本中，Bean自动装配的有以下几种方式：</p>
-<p>autowire参数</p>
-<ol>
-<li>byName 根据id/name</li>
-<li>byType 根据类名</li>
-<li>constructor 根据构造参数</li>
-<li>no 人工指定（默认）</li>
-</ol>
-<p>autodetect方法在3.0版本以后已被遗弃</p>
-        
-          <a class="article-more-a" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/Spring%E4%B8%ADBean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是Spring-Bean？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">什么是Spring Bean？</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-04T07:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Bean是Spring框架中<strong>最核心</strong>的两个概念之一（另一个是<strong>面向切面编程AOP</strong>）。</p>
-<p>是否正确理解 Bean 对于掌握和高效使用 Spring 框架至关重要。</p>
-<p>遗憾的是，网上不计其数的文章，却没有简单而清晰的解释。</p>
-<p>那么，Spring bean 到底是什么？</p>
-<p>接下来我们用图文方式来解析这一个概念。</p>
-        
-          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bean</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/%E4%BB%80%E4%B9%88%E6%98%AFSpring-Bean%EF%BC%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-注解@Component,@Controller,@Service,@Repository详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">注解@Component,@Controller,@Service,@Repository详解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-02-04T07:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="官方语录"><a href="#官方语录" class="headerlink" title="官方语录"></a>官方语录</h1><h3 id="官网引用-Repository，-Component"><a href="#官网引用-Repository，-Component" class="headerlink" title="官网引用@Repository，@Component"></a>官网引用@Repository，@Component</h3><p>引用spring的官方文档中的一段描述：</p>
-<p>在Spring2.0之前的版本中，<code>@Repository</code>注解可以标记在任何的类上，用来表明该类是用来执行与数据库相关的操作（即dao对象），并支持自动处理数据库操作产生的异常</p>
-<p>在Spring2.5版本中，引入了更多的Spring类注解：<code>@Component</code>,<code>@Service</code>,<code>@Controller</code>。<code>@Component</code>是一个通用的Spring容器管理的单例bean组件。而<code>@Repository</code>, <code>@Service</code>, <code>@Controller</code>就是针对不同的使用场景所采取的特定功能化的注解组件。</p>
-<p>因此，当你的一个类被<code>@Component</code>所注解，那么就意味着同样可以用<code>@Repository</code>, <code>@Service</code>, <code>@Controller</code>来替代它，同时这些注解会具备有更多的功能，而且功能各异。</p>
-<p>最后，如果你不知道要在项目的业务层采用<code>@Service</code>还是<code>@Component</code>注解。那么，<code>@Service</code>是一个更好的选择。</p>
-<p>就如上文所说的，<code>@Repository</code>早已被支持了在你的持久层作为一个标记可以去自动处理数据库操作产生的异常（译者注：因为原生的java操作数据库所产生的异常只定义了几种，但是产生数据库异常的原因却有很多种，这样对于数据库操作的报错排查造成了一定的影响；而Spring拓展了原生的持久层异常，针对不同的产生原因有了更多的异常进行描述。所以，在注解了<code>@Repository</code>的类上如果数据库操作中抛出了异常，就能对其进行处理，转而抛出的是翻译后的spring专属数据库异常，方便我们对异常进行排查处理）。</p>
-<table>
+        <h3 id="Http状态码"><a href="#Http状态码" class="headerlink" title="Http状态码"></a>Http状态码</h3><table>
 <thead>
 <tr>
-<th>注解</th>
-<th>含义</th>
+<th>状态码</th>
+<th>信息</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>@Component</td>
-<td>最普通的组件，可以被注入到spring容器进行管理</td>
+<td>200（成功）</td>
+<td>服务器已成功处理了请求。（一切正常）</td>
 </tr>
 <tr>
-<td>@Repository</td>
-<td>作用于持久层</td>
+<td>301（永久移动）</td>
+<td>服务器资源永久改变。</td>
 </tr>
 <tr>
-<td>@Service</td>
-<td>作用于业务逻辑层</td>
+<td>400（错误请求）</td>
+<td>服务器不理解请求的语法。（客户端方面的问题）</td>
 </tr>
 <tr>
-<td>@Controller</td>
-<td>作用于表现层（spring-mvc的注解）</td>
+<td>404（未找到）</td>
+<td>未找到资源</td>
+</tr>
+<tr>
+<td>500（服务器内部错误）</td>
+<td>服务器遇到错误，无法完成请求。（服务期方面的问题）</td>
 </tr>
 </tbody></table>
-<p><strong>@Component</strong></p>
-<p>用来表示一个平常的普通组件，当一个类不合适用以上的注解定义时用这个组件修饰。</p>
-<p><strong>@Controller</strong></p>
-<p>用来表示一个web控制层bean，如SpringMvc中的控制器。</p>
-<p><strong>@Service</strong></p>
-<p>用来表示一个业务层bean。</p>
+<p>200 – OK – 一切正常</p>
+<p>400 – Bad Request – 请求无效，需要附加细节解释如 “JSON无效”</p>
+<p>301 – Moved Permanently</p>
+<p>304 – Not Modified – 客户端使用缓存数据</p>
+<p>404 – Not found – 没有发现该资源</p>
+<p>500 – Internal Server Error – API开发者应该避免这种错误。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Web</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/11/Http%E7%8A%B6%E6%80%81%E7%A0%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <a class="article-more-a" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/#more">more >></a>
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
         
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-注解@GetMapping和@RequestMapping的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/11/%E6%B3%A8%E8%A7%A3@GetMapping%E5%92%8C@RequestMapping%E7%9A%84%E5%8C%BA%E5%88%AB/">注解@GetMapping和@RequestMapping的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/11/%E6%B3%A8%E8%A7%A3@GetMapping%E5%92%8C@RequestMapping%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2022-03-11T07:52:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-11</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="复合注解"><a href="#复合注解" class="headerlink" title="复合注解"></a>复合注解</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping</span> <span class="comment">//表示只接受GET方法的RequestMapping </span></span><br><span class="line">	等价于<span class="meta">@RequestMapping(value = &quot;/user/&#123;id&#125;&quot;,method = RequestMethod.GET)</span></span><br><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="meta">@DeleteMapping</span></span><br><span class="line"><span class="meta">@PutMapping</span></span><br><span class="line">.....</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/11/%E6%B3%A8%E8%A7%A3@GetMapping%E5%92%8C@RequestMapping%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-注解@RequestParam详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/11/%E6%B3%A8%E8%A7%A3@RequestParam%E8%AF%A6%E8%A7%A3/">注解@RequestParam详解</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/11/%E6%B3%A8%E8%A7%A3@RequestParam%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2022-03-11T07:42:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-11</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="注解-RequestParam详解"><a href="#注解-RequestParam详解" class="headerlink" title="注解@RequestParam详解"></a>注解@RequestParam详解</h1><blockquote>
+<p>@RequestParam(value=” “)中的值是前端页面的需要传递的文本框或者别的标签的name属性对应的值，不是pojo类中对应的属性的名字。（pojo是实体类）</p>
+</blockquote>
+<p><img src="/2022/03/11/%E6%B3%A8%E8%A7%A3@RequestParam%E8%AF%A6%E8%A7%A3/image/image-20210223152732378.png" alt="image-20210223152732378"></p>
+<p><strong>@RequestParam只能接收前台name为inputEmail的属性值。不能前台是id否则不对</strong>。</p>
+<p><img src="/2022/03/11/%E6%B3%A8%E8%A7%A3@RequestParam%E8%AF%A6%E8%A7%A3/image/image-20210223152820755.png" alt="image-20210223152820755"></p>
+
       
 
       
@@ -604,7 +479,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/04/%E6%B3%A8%E8%A7%A3@Component,@Controller,@Service,@Repository%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/03/11/%E6%B3%A8%E8%A7%A3@RequestParam%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
         </p>
       
 
@@ -634,20 +509,20 @@
 
 
   
-    <article id="post-什么是IOC？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Restful请求风格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">什么是IOC？</a>
+      <a class="article-title" href="/2022/03/10/Restful%E8%AF%B7%E6%B1%82%E9%A3%8E%E6%A0%BC/">Restful请求风格格</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2021-02-03T09:17:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2022/03/10/Restful%E8%AF%B7%E6%B1%82%E9%A3%8E%E6%A0%BC/" class="archive-article-date">
+  	<time datetime="2022-03-10T02:44:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
 </a>
 
         
@@ -655,13 +530,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p><strong>控制反转</strong>（Inversion of Control，缩写为<strong>IoC</strong>），</p>
-<p>是<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=458310&ss_c=ssc.citiao.link">面向对象编程</a>中的一种设计原则，可以用来减低计算机代码之间的<a target="_blank" rel="noopener" href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8596061&ss_c=ssc.citiao.link">耦合度</a>。</p>
-<p>其中最常见的方式叫做<strong>依赖注入</strong>（Dependency Injection，简称<strong>DI</strong>），还有一种方式叫“依赖查找”（Dependency Lookup）。</p>
-</blockquote>
+        <h1 id="RestFul"><a href="#RestFul" class="headerlink" title="RestFul"></a>RestFul</h1><p>特点：</p>
+<p><code>面向资源编程：</code></p>
+<p>​    将所有的数据包括操作数据库中的数据，当成资源看待。</p>
+<p>​    由<code>localhost:8080/dept/get?deptId=100</code>→<code>localhost:8080/dept/100</code></p>
+<p>​                                                                                →<code>localhost:8080/dept/&#123;deptName:技术部,deptLoc:大连&#125;</code></p>
+<p>localhost:8080/dept/100 可以是增 又可以使删 ，采用请求方式进行区分不用地址区分。</p>
         
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/#more">more >></a>
+          <a class="article-more-a" href="/2022/03/10/Restful%E8%AF%B7%E6%B1%82%E9%A3%8E%E6%A0%BC/#more">more >></a>
         
       
 
@@ -675,7 +551,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RestFul</a>
         		</li>
       		
 		</ul>
@@ -685,7 +561,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/%E4%BB%80%E4%B9%88%E6%98%AFIOC%EF%BC%9F/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/03/10/Restful%E8%AF%B7%E6%B1%82%E9%A3%8E%E6%A0%BC/">展开全文 >></a>
         </p>
       
 
@@ -715,20 +591,20 @@
 
 
   
-    <article id="post-Git如何查看远程仓库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-classpath是指哪里？与classpath-的区别？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">Git如何查看远程仓库</a>
+      <a class="article-title" href="/2022/03/08/classpath%E6%98%AF%E6%8C%87%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%8Eclasspath-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">classpath是指哪里？与classpath*的区别？</a>
     </h1>
   
 
         
-        <a href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-02-03T08:02:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
+        <a href="/2022/03/08/classpath%E6%98%AF%E6%8C%87%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%8Eclasspath-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="archive-article-date">
+  	<time datetime="2022-03-08T02:41:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
 </a>
 
         
@@ -736,15 +612,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="切换远程仓库地址："><a href="#切换远程仓库地址：" class="headerlink" title="切换远程仓库地址："></a>切换远程仓库地址：</h2><ul>
-<li><p><strong>方式一：修改远程仓库地址</strong></p>
-<p>【git remote set-url origin URL】 更换远程仓库地址，URL为新地址。</p>
-</li>
-<li><p><strong>方式二：先删除远程仓库地址，然后再添加</strong></p>
-<p>【git remote rm origin】 删除现有远程仓库<br>【git remote add origin url】添加新远程仓库</p>
-</li>
-</ul>
-<h2 id="【git-remote-v-】查看远程仓库的地址"><a href="#【git-remote-v-】查看远程仓库的地址" class="headerlink" title="【git remote -v 】查看远程仓库的地址"></a>【git remote -v 】查看远程仓库的地址</h2>
+        <p><img src="/2022/03/08/classpath%E6%98%AF%E6%8C%87%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%8Eclasspath-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/image/image-20220308104134177.png" alt="image-20220308104134177"></p>
+
       
 
       
@@ -757,7 +626,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -767,7 +636,88 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/03/Git%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/03/08/classpath%E6%98%AF%E6%8C%87%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%8Eclasspath-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-inner-join-与-left-join-之间的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/02/inner-join-%E4%B8%8E-left-join-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/">inner join 与 left join 之间的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/02/inner-join-%E4%B8%8E-left-join-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2022-03-02T07:07:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、sql的left join 、right join 、inner join之间的区别</p>
+        
+          <a class="article-more-a" href="/2022/03/02/inner-join-%E4%B8%8E-left-join-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/02/inner-join-%E4%B8%8E-left-join-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
         </p>
       
 
@@ -799,7 +749,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
+      <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
     </nav>
   
 
@@ -811,7 +761,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 B_tao
+    		&copy; 2024 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -1066,6 +1016,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软考</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Mock测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
             
             <div class="clearfix"></div>
