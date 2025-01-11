@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>什么是Swagger？ | Btao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、什么是Swagger？ Swagger是一款， 快速生成RESTFUL接口在线文档+快速测试接口的工具。  二、怎么用，如何搭建Swagger？2.1:引入swagger的依赖目前推荐使用2.7.0版本,因为2.6.0版本有bug，而其他版本又没有经过验证 123456789101112一：引入Swagger依赖库&lt;!--引入swagger--&gt;&lt;dependency&gt;">
+  <meta name="description" content="一、什么是Swagger？ Swagger是一款， 快速生成RESTFUL接口在线文档+快速测试接口的工具。  二、怎么用，如何搭建Swagger？2.1:引入swagger的依赖目前推荐使用2.7.0版本,因为2.6.0版本有bug，而其他版本又没有经过验证">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是Swagger？">
 <meta property="og:url" content="http://example.com/2022/11/14/%E4%BB%80%E4%B9%88%E6%98%AFSwagger%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Btao的博客">
-<meta property="og:description" content="一、什么是Swagger？ Swagger是一款， 快速生成RESTFUL接口在线文档+快速测试接口的工具。  二、怎么用，如何搭建Swagger？2.1:引入swagger的依赖目前推荐使用2.7.0版本,因为2.6.0版本有bug，而其他版本又没有经过验证 123456789101112一：引入Swagger依赖库&lt;!--引入swagger--&gt;&lt;dependency&gt;">
+<meta property="og:description" content="一、什么是Swagger？ Swagger是一款， 快速生成RESTFUL接口在线文档+快速测试接口的工具。  二、怎么用，如何搭建Swagger？2.1:引入swagger的依赖目前推荐使用2.7.0版本,因为2.6.0版本有bug，而其他版本又没有经过验证">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2022/11/14/%E4%BB%80%E4%B9%88%E6%98%AFSwagger%EF%BC%9F/image/image-20221114105929579.png">
 <meta property="og:image" content="http://example.com/2022/11/14/%E4%BB%80%E4%B9%88%E6%98%AFSwagger%EF%BC%9F/image/image-20221114110143738.png">
 <meta property="og:image" content="http://example.com/2022/11/14/%E4%BB%80%E4%B9%88%E6%98%AFSwagger%EF%BC%9F/image/image-20221114110252626.png">
 <meta property="article:published_time" content="2022-11-14T02:51:07.000Z">
-<meta property="article:modified_time" content="2022-11-14T03:02:55.107Z">
+<meta property="article:modified_time" content="2025-01-11T01:54:28.438Z">
 <meta property="article:author" content="B_tao">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Swagger">
@@ -72,7 +72,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 79
+			总文章数 80
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -203,6 +203,8 @@
 <p>Swagger是一款， <strong>快速生成RESTFUL接口在线文档</strong>+<strong>快速测试接口</strong>的工具。</p>
 </blockquote>
 <h1 id="二、怎么用，如何搭建Swagger？"><a href="#二、怎么用，如何搭建Swagger？" class="headerlink" title="二、怎么用，如何搭建Swagger？"></a>二、怎么用，如何搭建Swagger？</h1><h2 id="2-1-引入swagger的依赖"><a href="#2-1-引入swagger的依赖" class="headerlink" title="2.1:引入swagger的依赖"></a>2.1:引入swagger的依赖</h2><p>目前推荐使用2.7.0版本,因为2.6.0版本有bug，而其他版本又没有经过验证</p>
+<a id="more"></a>
+
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">一：引入Swagger依赖库</span><br><span class="line"><span class="comment">&lt;!--引入swagger--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="2-2：springBoot整合swagger"><a href="#2-2：springBoot整合swagger" class="headerlink" title="2.2：springBoot整合swagger"></a>2.2：springBoot整合swagger</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableSwagger2</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwaggerConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Docket <span class="title">productApi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .apiInfo(apiInfo())</span><br><span class="line">                .select()</span><br><span class="line">                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))  <span class="comment">//添加ApiOperiation注解的被扫描</span></span><br><span class="line">                .paths(PathSelectors.any())</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> ApiInfo <span class="title">apiInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ApiInfoBuilder().title(”swagger和springBoot整合“).description(”swagger的API文档<span class="string">&quot;)</span></span><br><span class="line"><span class="string">                .version(&quot;</span><span class="number">1.0</span><span class="string">&quot;).build();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -405,7 +407,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2024 B_tao
+    		&copy; 2025 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -555,10 +557,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
@@ -692,6 +690,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">大模型</a>
               </li>
             
             <div class="clearfix"></div>

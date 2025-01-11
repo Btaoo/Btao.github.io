@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 79
+			总文章数 80
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -167,6 +167,163 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java树构建的几种方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/30/Java%E6%A0%91%E6%9E%84%E5%BB%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/">Java树构建的几种方案</a>
+    </h1>
+  
+
+        
+        <a href="/2024/05/30/Java%E6%A0%91%E6%9E%84%E5%BB%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/" class="archive-article-date">
+  	<time datetime="2024-05-30T07:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-30</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、递归构建树"><a href="#一、递归构建树" class="headerlink" title="一、递归构建树"></a>一、递归构建树</h1><blockquote>
+<p>1、找到所有根节点。</p>
+<p>2、对根节点进行递归寻找子节点。</p>
+<p>完成树构建</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeUtil</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取所有的根节点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends TreeNode&gt; <span class="function">List&lt;T&gt; <span class="title">getRootNode</span><span class="params">(List&lt;T&gt; treeNodeList,Set&lt;Integer&gt; nodeIdSet)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; rootNodeList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T treeNode : treeNodeList) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="number">0</span> == treeNode.getParentId() || <span class="keyword">null</span> == treeNode.getParentId())&#123;</span><br><span class="line">                rootNodeList.add(treeNode);</span><br><span class="line">                nodeIdSet.add(treeNode.getId());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rootNodeList;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构建树</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends TreeNode&gt; <span class="function">T <span class="title">buildChildTree</span><span class="params">(T rootNode,List&lt;T&gt; treeNodeList,Set&lt;Integer&gt; nodeIdSet)</span></span>&#123;</span><br><span class="line">        List&lt;T&gt; childNodeList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T treeNode : treeNodeList) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!nodeIdSet.contains(treeNode.getId()) &amp;&amp; treeNode.getParentId().equals(rootNode.getId()))&#123;</span><br><span class="line">                    nodeIdSet.add(treeNode.getId());</span><br><span class="line">                    <span class="comment">//这里相当于把当前节点又作为父节点 递归查询子节点</span></span><br><span class="line">                    childNodeList.add(buildChildTree(treeNode,treeNodeList,nodeIdSet));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        rootNode.setChildList((List&lt;TreeNode&gt;) childNodeList);</span><br><span class="line">        <span class="keyword">return</span> rootNode;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends TreeNode&gt; <span class="function">List&lt;T&gt; <span class="title">buildTree</span><span class="params">(List&lt;T&gt; treeNodeList)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (CollectionUtils.isEmpty(treeNodeList))&#123;</span><br><span class="line">            <span class="keyword">return</span> Collections.emptyList();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//用来保存每一棵完整的树</span></span><br><span class="line">        List&lt;T&gt; treeNodes = <span class="keyword">new</span> ArrayList&lt;T&gt;();</span><br><span class="line">        <span class="comment">//用来保存已装填过的树节点ID 防止重复遍历</span></span><br><span class="line">        Set&lt;Integer&gt; nodeIdSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (T root : getRootNode(treeNodeList,nodeIdSet)) &#123;</span><br><span class="line">            T treeNode = buildChildTree(root, treeNodeList,nodeIdSet);</span><br><span class="line">            treeNodes.add(treeNode);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> treeNodes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2024/05/30/Java%E6%A0%91%E6%9E%84%E5%BB%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/05/30/Java%E6%A0%91%E6%9E%84%E5%BB%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-英语知识点学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/25/%E8%8B%B1%E8%AF%AD%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0/">英语知识点学习</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/25/%E8%8B%B1%E8%AF%AD%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2024-01-25T03:03:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-25</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-英语知识点学习"><a href="#1-英语知识点学习" class="headerlink" title="1.英语知识点学习"></a>1.英语知识点学习</h1><ul>
+<li>cope Vi.应对应付 <strong>短语cope with</strong></li>
+<li>pill n.药片 <strong>复数pills</strong></li>
+<li>caught - catch过去式/过去分词 <strong>短语catch up with my friends 与我的朋友联系</strong></li>
+<li>outta = out of 书面用语</li>
+<li>LA 洛杉矶(Los Angeles)</li>
+<li>bound - bind&lt;绑定&gt;过去式/过去分词 <strong>短语be bound to do 注定要…</strong></li>
+<li>gotta = got to 不规范用法</li>
+<li>fresh out of… 刚用完…</li>
+</ul>
+        
+          <a class="article-more-a" href="/2024/01/25/%E8%8B%B1%E8%AF%AD%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/25/%E8%8B%B1%E8%AF%AD%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20240123模板方法设计模式实现通用导入思考过程记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -189,11 +346,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1.根据ImportInterface接口封装抽象类AbstractImportExcel，其中应包含接口方法，以及应该实现的controller中整套处理逻辑</p>
-<p><img src="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/image/image-20240110170848383.png" alt="image-20240110170848383"></p>
-<p>2.其他人只需要实现抽象类，就可实现导入功能拓展</p>
-<p>3.考虑controller里怎么调用， 前端传type名称，spaceId，和file流。</p>
-<p>4.根据什么判断是多sheet页？从而实现单sheet页和多sheet页逻辑通过if else分来。（采用type判断？如果某种固定type就采用多sheet页逻辑，固定好模板序号进行解析？</p>
-
+        
+          <a class="article-more-a" href="/2024/01/23/20240123%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E9%80%9A%E7%94%A8%E5%AF%BC%E5%85%A5%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/#more">more >></a>
+        
       
 
       
@@ -585,175 +740,6 @@
 
 
   
-    <article id="post-2023软考备考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/">2023软考备考</a>
-    </h1>
-  
-
-        
-        <a href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/" class="archive-article-date">
-  	<time datetime="2023-08-14T01:14:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、软考时间及项目"><a href="#一、软考时间及项目" class="headerlink" title="一、软考时间及项目"></a>一、软考时间及项目</h1><p><img src="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/image/%E4%B8%8B%E8%BD%BD.jpg" alt="下载"></p>
-<h1 id="二、考试项目介绍"><a href="#二、考试项目介绍" class="headerlink" title="二、考试项目介绍"></a>二、考试项目介绍</h1><p><img src="https://pic1.zhimg.com/80/v2-54746e32b468745b6fa46c7805271f16_720w.webp?source=1940ef5c" alt="img"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软考</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/08/14/2023%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是MD5？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/">什么是MD5？</a>
-    </h1>
-  
-
-        
-        <a href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2022-11-16T06:02:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-16</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、什么是MD5"><a href="#一、什么是MD5" class="headerlink" title="一、什么是MD5?"></a>一、什么是MD5?</h1><blockquote>
-<p>md5的全称是<strong>md5信息摘要算法（英文：MD5 Message-Digest Algorithm ）</strong>，一种被广泛使用的<strong>密码散列函数</strong>，可以<strong>产生一个</strong></p>
-<p><strong>128位（16字节，1字节8位）的散列值</strong>（常见的是用32位的16进制表示，比如：0caa3b23b8da53f9e4e041d95dc8fa2c），</p>
-<p><strong>用于确保信息传输的完整一致</strong>。</p>
-</blockquote>
-<h1 id="二、MD5有什么用？"><a href="#二、MD5有什么用？" class="headerlink" title="二、MD5有什么用？"></a>二、MD5有什么用？</h1><blockquote>
-<p>简述：MD5可以生成任意一个文件或字符串的“数字指纹”，对文件或字符串的微小改动都会直接导致数字指纹的巨大变化。</p>
-</blockquote>
-<blockquote>
-<p>作用：<strong>一致性校验</strong></p>
-<p>1.<strong>密码的加密存储</strong>，用户设置密码时，服务端只记录这个密码的MD5，而不记录密码本身，以后验证用户身份时，只需要将用户输入的密码再次做一下MD5后，与记录的MD5作一个比较即可验证其密码的合法性。</p>
-<p>2.<strong>数字签名</strong>，比如发布一个程序，为了防止别人在你的程序里插入病毒或木马，你可以在发布这个程序的同时，公开这个程序文件的MD5码，这样别人只需要在任何地方下载这个程序后做一次MD5，然后跟公开的这个MD5作一个比较就知道这个程序是否被第三方修改过</p>
-<p>3.<strong>文件完整性验证</strong>，比如当下载一个文件时，服务器返回的信息中包括这个文件的md5，在本地下载完毕时进行md5，将两个md5值进行比较，如果一致则说明文件完整没有丢包现象</p>
-<p>4.<strong>文件上传</strong>，比如百度云实现的秒传，就是对比你上传的文件md5在百度服务器是否已经存在了</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MD5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/11/16/%E4%BB%80%E4%B9%88%E6%98%AFMD5%EF%BC%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
@@ -768,7 +754,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2024 B_tao
+    		&copy; 2025 B_tao
     	</div>
       	<div class="footer-right">
       		Thanks♪(･ω･)ﾉ
@@ -918,10 +904,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
@@ -1055,6 +1037,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">大模型</a>
               </li>
             
             <div class="clearfix"></div>
