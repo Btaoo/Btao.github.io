@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 80
+			总文章数 81
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -166,6 +166,98 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-DM数据库权限基本操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">DM数据库权限基本操作</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2023-09-19T02:25:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-19</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 某个用户下查看全部表</span><br><span class="line"> *&#x2F;</span><br><span class="line"> select * from dba_tables where owner&#x3D;&#39;XQFX&#39;;</span><br><span class="line">   </span><br><span class="line">&#x2F;**</span><br><span class="line"> * 查看某个用户被授予的权限</span><br><span class="line"> *&#x2F;</span><br><span class="line"> SELECT * FROM dba_role_privs WHERE grantee&#x3D;&#39;XQFX&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 查看系统所有角色信息</span><br><span class="line"> *&#x2F;</span><br><span class="line"> </span><br><span class="line"> select * from dba_roles;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 赋权</span><br><span class="line"> *&#x2F;</span><br><span class="line"> grant role to user;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>–内置角色分类<br>DB_AUDIT 开头为审计相关角色，默认赋给了 SYSAUDITOR；</p>
+<p>DB_POLICY 开头的为安全相关角色，默认赋给 SYSSSO；</p>
+<p>其他 DBA、RESOURCE、PULIBC、SOI、VTI 等默认赋给了 SYSDBA。</p>
+<p>DBA：系统管理员角色，拥有除审计和强制访问控制之外的几乎所有权限，</p>
+<p>RESOURCE：拥有 CREATE 创建表、索引、视图等对象定义的权限和数据操作权限（DML 操作）。</p>
+<p>PULIBC：拥有数据操作权限（增删改查操作），没有创建表、视图等对象定义权限。</p>
+<p>SOI：具有查询系统表（SYS 开头的）查询权限，新建用户一般需要赋此权限。</p>
+<p>VTI 具有查询动态视图（v$开头的）权限。`</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+	  
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/19/DM%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-2023软考备考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -647,75 +739,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2022/10/24/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VsCode插件-Turbo-Console-Log" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/18/VsCode%E6%8F%92%E4%BB%B6-Turbo-Console-Log/">VsCode插件-Turbo Console Log</a>
-    </h1>
-  
-
-        
-        <a href="/2022/10/18/VsCode%E6%8F%92%E4%BB%B6-Turbo-Console-Log/" class="archive-article-date">
-  	<time datetime="2022-10-18T02:44:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-18</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Turbo Console Log<br>快速添加 console.log 信息，js debug 必备</p>
-<p>快捷键</p>
-<p>ctrl + alt + l 选中变量之后，使用这个快捷键生成 console.log</p>
-<p>alt + shift + c 注释所有 console.log</p>
-<p>alt + shift + u 启用所有 console.log</p>
-<p>alt + shift + d 删除所有 console.log</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      	  
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/18/VsCode%E6%8F%92%E4%BB%B6-Turbo-Console-Log/">展开全文 >></a>
         </p>
       
 
